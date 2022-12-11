@@ -1,5 +1,11 @@
 $font: 'Montserrat';
 
+// colors variables map
+$colors: (
+  'basic-yellow': #f8d24e,
+);
+
+//color variables for @each in section products
 $bg-colors: (
   'ice-cream': #aec6a5,
   'ice-coffee': #efd478,
