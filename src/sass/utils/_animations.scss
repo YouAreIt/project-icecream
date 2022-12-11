@@ -1,0 +1,17 @@
+@keyframes card-slide-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+
+@keyframes card-pic-slide-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(11px);
+  }
+}

@@ -1,0 +1,172 @@
+@import './decimals';
+
+// container mixin
+@mixin container($w: 480px, $mar: 0 auto, $pad: 0 20px) {
+  @if $w {
+    max-width: $w;
+
+    @media screen and(min-width: 768px) {
+      max-width: 768px;
+      padding: 0 32px;
+    }
+
+    @media screen and(min-width: 1200px) {
+      max-width: 1200px;
+      padding: 0 16px;
+    }
+  }
+
+  @if $mar {
+    margin: $mar;
+  }
+
+  @if $pad {
+    padding: $pad;
+  }
+}
+
+// section ident mixin
+@mixin section-indent($pt: 60px, $pb: $pt) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+}
+
+//flex mixin
+@mixin flex(
+  $dsp: flex,
+  $fw: false,
+  $fd: false,
+  $ai: center,
+  $jc: center,
+  $indent: false
+) {
+  @if $dsp {
+    display: $dsp;
+  }
+  @if $fw {
+    flex-wrap: $fw;
+  }
+  @if $fd {
+    flex-direction: $fd;
+  }
+  @if $ai {
+    align-items: $ai;
+  }
+  @if $jc {
+    justify-content: $jc;
+  }
+  @if $indent {
+    gap: $indent;
+  }
+}
+
+// position absolute mixin
+@mixin position(
+  $pos: absolute,
+  $top: false,
+  $right: false,
+  $bot: false,
+  $left: false
+) {
+  @if $pos {
+    @if $pos == 'center' {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    } @else {
+      position: $pos;
+    }
+  }
+
+  @if $top {
+    top: $top;
+  }
+
+  @if $right {
+    right: $right;
+  }
+
+  @if $bot {
+    bottom: $bot;
+  }
+
+  @if $left {
+    left: $left;
+  }
+}
+
+// grid+flex-basis mixin
+@mixin card-set($items: 1, $indentX: 32px, $indentY: $indentX) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $indentX $indentY;
+
+  & > [class*='__item'] {
+    flex-basis: calc((100% - $indentY * ($items - 1)) / $items);
+  }
+}
+
+$breakpoints: (
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1200px,
+  'retina': 'retina',
+);
+
+@mixin mq($device, $type: min) {
+  @if map_has_key($breakpoints, $device) {
+    @if $device == 'retina' {
+      @media only screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        @content;
+      }
+    }
+    $width: map_get($breakpoints, $device);
+    @if $type == max {
+      $width: $width - 0.02;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+// fonts mixin
+@mixin fonts(
+  $fst: normal,
+  $fw: false,
+  $fs: 14px,
+  $lh: false,
+  $ls: 0.04em,
+  $tt: false,
+  $cl: false
+) {
+  @if $fst {
+    font-style: $fst;
+  }
+  @if $fw {
+    font-weight: $fw;
+  }
+
+  @if $fs {
+    font-size: $fs;
+  }
+
+  @if $lh {
+    line-height: decimal-round(calc($lh / $fs));
+  }
+
+  @if $ls {
+    letter-spacing: $ls;
+  }
+
+  @if $tt {
+    text-transform: $tt;
+  }
+
+  @if $cl {
+    color: $cl;
+  }
+}

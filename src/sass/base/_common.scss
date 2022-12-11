@@ -1,0 +1,28 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font, sans-serif;
+  background-image: url('../images/body/bg-icecreem-480@1x.jpg');
+
+  @include mq(retina) {
+    background-image: url('../images/body/bg-icecreem-480@2x.jpg');
+  }
+
+  @include mq(tablet) {
+    background-image: url('../images/body/bg-icecreem-768@1x.jpg');
+
+    @include mq(retina) {
+      background-image: url('../images/body/bg-icecreem-768@2x.jpg');
+    }
+  }
+
+  @include mq(desktop) {
+    background-image: url('../images/body/bg-icecreem-1200@1x.jpg');
+
+    @include mq(retina) {
+      background-image: url('../images/body/bg-icecreem-1200@2x.jpg');
+    }
+  }
+}
