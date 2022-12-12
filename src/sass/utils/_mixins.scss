@@ -122,6 +122,10 @@ $breakpoints: (
         (min-resolution: 2dppx) {
         @content;
       }
+      // how to apply
+      // @include mq(retina) {
+      //   background-image: url('../images/body/bg-icecreem-480@2x.jpg');
+      // }
     }
     $width: map_get($breakpoints, $device);
     @if $type == max {

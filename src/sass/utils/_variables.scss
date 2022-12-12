@@ -1,19 +1,40 @@
+@import 'functions';
+
 $font: 'Montserrat';
 
 // colors variables map
 $colors: (
+  'basic-white': #fcfcfc,
+  'sec-white': #ffffff,
+  'dirty-white': #e1e1e1,
+
+  'basic-grey': #ababab,
+  'sec-grey': #7a7a7a,
+
+  'basic-black': #000000,
+  'sec-black': #131313,
+
   'basic-yellow': #f8d24e,
+  'card-yellow': #efd478,
+  'ellipse-yellow': #997217,
+
+  'basic-green': #84a278,
+  'sec-green': #84a178,
+  'card-green': #aec6a5,
+  'ellipse-green': #0a8817,
+
+  'basic-brown': #d6936d,
 );
 
 //color variables for @each in section products
 $bg-colors: (
-  'ice-cream': #aec6a5,
-  'ice-coffee': #efd478,
-  'milkshakes': #d6936d,
+  'ice-cream': getColor('card-green'),
+  'ice-coffee': getColor('card-yellow'),
+  'milkshakes': getColor('basic-brown'),
 );
 
 $shadow-colors: (
-  'ice-cream': #0a8817,
-  'ice-coffee': #997217,
-  'milkshakes': #000000,
+  'ice-cream': getColor('ellipse-green'),
+  'ice-coffee': getColor('ellipse-yellow'),
+  'milkshakes': getColor('basic-black'),
 );
