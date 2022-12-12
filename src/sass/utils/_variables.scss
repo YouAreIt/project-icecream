@@ -1,5 +1,6 @@
 @import 'functions';
 
+// basic font variable for body
 $basic-font: 'Montserrat';
 
 // colors variables map
@@ -26,13 +27,14 @@ $colors: (
   'basic-brown': #d6936d,
 );
 
-//color variables for @each in section products
+// bg-colors variables for @each in section products
 $bg-colors: (
   'ice-cream': getColor('card-green'),
   'ice-coffee': getColor('card-yellow'),
   'milkshakes': getColor('basic-brown'),
 );
 
+// shadow-colors variables for @each in section products
 $shadow-colors: (
   'ice-cream': getColor('ellipse-green'),
   'ice-coffee': getColor('ellipse-yellow'),

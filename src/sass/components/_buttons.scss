@@ -1,0 +1,51 @@
+// products button
+.products-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 108px;
+  height: 38px;
+  margin: 0 auto;
+
+  border: 2px solid getColor('basic-yellow');
+  border-radius: 10px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: getColor('basic-black');
+
+  &:hover {
+    border-color: getColor('ellipse-green');
+  }
+
+  @include mq(desktop) {
+    width: 134px;
+    height: 42px;
+    margin: 0 auto;
+
+    font-size: 14px;
+    line-height: 18px;
+
+    &:focus {
+      color: getColor('basic-white');
+    }
+    &:disabled {
+      border-color: getColor('basic-grey');
+    }
+  }
+}
+
+.products__btn {
+  padding: 0;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  border: none;
+
+  .products__icon {
+    width: 40px;
+    height: 16px;
+  }
+}
