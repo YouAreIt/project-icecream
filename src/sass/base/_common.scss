@@ -4,7 +4,8 @@ html {
 
 body {
   color: getColor('basic-white');
-  font-family: $font, sans-serif;
+  font-family: $basic-font, sans-serif;
+
   background-image: url('../images/body/bg-icecreem-480.svg');
 
   @include mq(tablet) {
