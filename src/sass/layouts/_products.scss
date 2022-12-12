@@ -1,31 +1,27 @@
 .products {
   @include section-indent;
-  color: #131313;
+  color: getColor('sec-black');
 }
+
 .products__container {
   @include container;
   text-align: center;
 }
-.products__label {
-  margin-bottom: 12px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: calc(22 / 18);
-  text-transform: uppercase;
-}
-.products__title {
-  margin-bottom: 148px;
-  font-family: 'Seymour One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: calc(38 / 30);
 
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+.products__label {
+  @include fonts($fw: 800, $fs: 18px, $lh: 22px, $tt: uppercase);
+
+  margin-bottom: 12px;
 }
+
+.products__title {
+  @include fonts($fs: 30px, $lh: 38px, $tt: uppercase);
+
+  margin-bottom: 148px;
+
+  font-family: 'Seymour One' sans-serif;
+}
+
 .products__list {
   @include card-set($indentX: 168px);
 
@@ -37,6 +33,7 @@
     @include card-set(3, 168px, 29px);
   }
 }
+
 .products__item {
   position: relative;
   display: flex;
