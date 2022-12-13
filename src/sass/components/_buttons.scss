@@ -1,40 +1,40 @@
 // products button
-.products-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 108px;
-  height: 38px;
-  margin: 0 auto;
+// .products-button {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: 108px;
+//   height: 38px;
+//   margin: 0 auto;
 
-  border: 2px solid getColor('basic-yellow');
-  border-radius: 10px;
+//   border: 2px solid getColor('basic-yellow');
+//   border-radius: 10px;
 
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 15px;
-  color: getColor('basic-black');
+//   font-weight: 600;
+//   font-size: 12px;
+//   line-height: 15px;
+//   color: getColor('basic-black');
 
-  &:hover {
-    border-color: getColor('ellipse-green');
-  }
+//   &:hover {
+//     border-color: getColor('ellipse-green');
+//   }
 
-  @include mq(desktop) {
-    width: 134px;
-    height: 42px;
-    margin: 0 auto;
+//   @include mq(desktop) {
+//     width: 134px;
+//     height: 42px;
+//     margin: 0 auto;
 
-    font-size: 14px;
-    line-height: 18px;
+//     font-size: 14px;
+//     line-height: 18px;
 
-    &:focus {
-      color: getColor('basic-white');
-    }
-    &:disabled {
-      border-color: getColor('basic-grey');
-    }
-  }
-}
+//     &:focus {
+//       color: getColor('basic-white');
+//     }
+//     &:disabled {
+//       border-color: getColor('basic-grey');
+//     }
+//   }
+// }
 
 .products__btn {
   padding: 0;
