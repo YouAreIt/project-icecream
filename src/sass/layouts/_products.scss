@@ -11,11 +11,27 @@
 .products__label {
   @include fonts($fw: 800, $fs: 18px, $lh: 22px, $tt: uppercase);
 
+  @include mq(tablet) {
+    @include fonts($fs: 22px, $lh: 27px);
+  }
+
+  @include mq(desktop) {
+    @include fonts($fs: 30px, $lh: 27px);
+  }
+
   margin-bottom: 12px;
 }
 
 .products__title {
   @include fonts($fs: 30px, $lh: 38px, $tt: uppercase);
+
+  @include mq(tablet) {
+    @include fonts($fs: 34px, $lh: 43px);
+  }
+
+  @include mq(desktop) {
+    @include fonts($fs: 36px, $lh: 45px);
+  }
 
   margin-bottom: 148px;
 
@@ -127,7 +143,7 @@
 }
 .products__text {
   margin-bottom: 50px;
-  @include fonts($lh: 25px, $cl: #131313);
+  @include fonts($lh: 25px, $cl: getColor('sec-black'));
 
   @include mq(desktop) {
     @include fonts($fs: 16px, $lh: 28px);
