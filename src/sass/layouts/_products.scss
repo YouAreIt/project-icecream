@@ -1,6 +1,15 @@
 .products {
   @include section-indent;
   color: getColor('sec-black');
+  background-image: url('../images/body/bg-icecreem-480.svg');
+
+  @include mq(tablet) {
+    background-image: url('../images/body/bg-icecreem-768.svg');
+  }
+
+  @include mq(desktop) {
+    background-image: url('../images/body/bg-icecreem-1200.svg');
+  }
 }
 
 .products__container {
