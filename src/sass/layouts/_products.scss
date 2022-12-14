@@ -158,3 +158,13 @@
     @include fonts($fs: 16px, $lh: 28px);
   }
 }
+
+.btn-1 {
+  @include button();
+  margin-top: 20px;
+}
+
+.btn-2 {
+  @include buttons();
+  margin-top: 20px;
+}
