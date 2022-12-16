@@ -1,6 +1,26 @@
+@import '~node_modules/swiper/swiper-bundle.min.css';
+
 .swiper {
   --swiper-theme-color: #84a178;
+  --swiper-pagination-bullet-size: 12px;
+  --swiper-pagination-bullet-horizontal-gap: 9px;
+}
 
-  // width: 600px;
-  // height: 300px;
+.swiper-wrapper {
+  padding-bottom: 24px;
+
+  @include mq(tablet) {
+    padding-bottom: 44px;
+  }
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 0;
 }
