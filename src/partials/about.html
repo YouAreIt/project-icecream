@@ -1,3 +1,67 @@
+<section class="about" id="about">
+  <div class="about__container">
+    <p class="about__label">tradition and love</p>
+    <h2 class="about__title">how it's made?</h2>
+
+    <div class="about__wrapper">
+      <picture class="picture">
+        <source
+          srcset="
+            ./images/about/desktop-about-picture@1x.png 1x,
+            ./images/about/desktop-about-picture@2x.png 2x
+          "
+          media="(min-width: 1200px)"
+        />
+
+        <source
+          srcset="
+            ./images/about/tablet-about-picture@1x.png 1x,
+            ./images/about/tablet-about-picture@2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+
+        <source
+          srcset="
+            ./images/about/mobile-about-picture@1x.png 1x,
+            ./images/about/mobile-about-picture@2x.png 2x
+          "
+          media="(max-width: 767px)"
+        />
+        <img
+          src="./images/about/mobile-about-picture@1x.png"
+          class="about__picture"
+          alt="cow"
+        />
+      </picture>
+
+      <div class="about__content-wrapper">
+        <p class="about__content-text">
+          Ice is a place where you will become not only a little happier, but
+          also healthier. Health is the main value for us, and we follow it when
+          creating our handmade desserts.
+        </p>
+        <p class="about__content-text">
+          We use traditional recipes and 100% natural ingredients. Our products
+          are so natural that they can be given to children from the age of
+          three years. Sweets lovers can expect 55 types of ice cream, 15 types
+          of coffee and 23 milkshakes.
+        </p>
+
+        <p class="about__content-text">
+          This is enough to choose ice cream and coffee for any mood!
+        </p>
+
+        <button class="about__btn" type="button" data-modal-open="about-modal">
+          Read more
+          <svg class="about__btn-icon">
+            <use href="./images/sprite.svg#icon-ep_arrow-right-bold"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- <section class="about" id="about">
   <div class="container">
     <button
