@@ -1,0 +1,62 @@
+.reviews__container {
+  @include container;
+  text-align: center;
+}
+
+.reviews {
+  background-color: #fff;
+}
+
+.reviewer__card {
+  @include flex($fd: column);
+}
+
+.reviewer__photo {
+  border: 1px solid getColor('sec-green');
+  border-radius: 50%;
+  margin-bottom: 32px;
+}
+
+.reviewer__comment {
+  width: 100%;
+  height: 100%;
+  background-color: getColor('sec-green');
+
+  @include fonts($fw: 400, $fs: 12px, $lh: 31px);
+
+  border-radius: 10px;
+  padding: 35px 39px;
+  margin-bottom: 32px;
+
+  @include mq(tablet) {
+    @include fonts($fw: 500, $fs: 14px, $lh: 26px);
+
+    border-radius: 24px;
+    padding: 28px 80px 29px;
+  }
+
+  @include mq(desktop) {
+    @include fonts($fw: 500, $fs: 16px, $lh: 30px);
+
+    padding: 43px 109px;
+    max-width: 968px;
+  }
+}
+
+.reviewer__name {
+  color: getColor('sec-black');
+
+  margin-bottom: 12px;
+
+  @include fonts($fw: 500, $fs: 20px, $lh: 37px);
+
+  @include mq(tablet) {
+    @include fonts($fw: 500, $fs: 16px, $lh: 30px);
+
+    margin-bottom: 32px;
+  }
+}
+
+.swiper-pagination {
+  position: relative;
+}
