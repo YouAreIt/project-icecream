@@ -1,0 +1,33 @@
+.gallery {
+    @include section-indent;
+    box-sizing: border-box;
+    background-image: url(url(../images/gallery/backgroud_mobile.jpg));
+}
+
+.container {
+    @include container;
+}
+
+.swiper {
+    height: 100%;
+}
+
+// .swiper-wrapper {
+//     margin-left: 20px;
+//     margin-right: 20px;
+// }
+
+.swiper-slide {
+    margin-top: -98px;
+}
+
+.swiper-slide img {
+    width: 280px;
+    height: 130px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
