@@ -1,82 +1,81 @@
-// .hero {
-//   h1,
-//   p,
-//   ul,
-//   li,
-//   a,
-//   button {
-//     padding: 0;
-//   }
-// }
+.hero {
+  h1,
+  p,
+  ul,
+  li,
+  a,
+  button {
+    padding: 0;
+  }
+}
 
-// .visually-hidden {
-//   position: absolute;
-//   white-space: nowrap;
-//   width: 1px;
-//   height: 1px;
-//   overflow: hidden;
-//   border: 0;
-//   padding: 0;
-//   clip: rect(0 0 0 0);
-//   clip-path: inset(50%);
-//   margin: -1px;
-// }
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 
-// %cursor {
-//     cursor: url('../images/hero/cursor.png') 0 0,
-//             url('../images/hero/cursor.cur') 0 0,
-//             pointer;
-// }
+%cursor {
+  cursor: url('../images/hero/cursor.png') 0 0,
+    url('../images/hero/cursor.cur') 0 0, pointer;
+}
 
 /* миксин для стилизации кнопок */
-// @mixin buttons(
-//   $width-btn: 108px,
-//   $font-size-btn: 14px,
-//   $backgr-color: getColor('basic-yellow')
-// ) {
-//   width: $width-btn;
-//   height: 42px;
-//   font: inherit;
-//   color: getColor('sec-black');
-//   font-weight: 600;
-//   font-size: $font-size-btn;
-//   line-height: 1.28;
-//   border-radius: 10px;
-//   border-color: transparent;
+@mixin buttons(
+  $width-btn: 108px,
+  $font-size-btn: 14px,
+  $backgr-color: getColor('basic-yellow')
+) {
+  width: $width-btn;
+  height: 42px;
+  font: inherit;
+  color: getColor('sec-black');
+  font-weight: 600;
+  font-size: $font-size-btn;
+  line-height: 1.28;
+  border-radius: 10px;
+  border-color: transparent;
 
-//   &:focus {
-//     color: getColor('sec-white');
-//   }
-//   &:focus-visible {
-//     outline: none;
-//   }
+  &:focus {
+    color: getColor('sec-white');
+  }
+  &:focus-visible {
+    outline: none;
+  }
 
-//   @if ($backgr-color == getColor('basic-yellow')) {
-//     background-color: getColor('basic-yellow');
-//     border: none;
+  @if ($backgr-color == getColor('basic-yellow')) {
+    background-color: getColor('basic-yellow');
+    border: none;
 
-//     &:hover,
-//     &:focus {
-//       background-color: getColor('ellipse-green');
-//     }
+    &:hover,
+    &:focus {
+      background-color: getColor('ellipse-green');
+    }
 
-//     &:disabled {
-//       background-color: getColor('basic-grey');
-//     }
-//   } @else {
-//     background-color: transparent;
-//     border: 2px solid getColor('basic-yellow');
+    &:disabled {
+      background-color: getColor('basic-grey');
+    }
+  } @else {
+    background-color: transparent;
+    border: 2px solid getColor('basic-yellow');
 
-//     &:hover,
-//     &:focus {
-//       border-color: getColor('ellipse-green');
-//     }
+    &:hover,
+    &:focus {
+      border-color: getColor('ellipse-green');
+    }
 
-//     &:disabled {
-//       border-color: getColor('basic-grey');
-//     }
-//   }
-// }
+    &:disabled {
+      border-color: getColor('basic-grey');
+    }
+  }
+}
 
 .hero_container {
   margin-left: auto;
@@ -113,23 +112,23 @@
         no-repeat,
       url('../images/hero/points-desk.svg') bottom left/1200px 384px no-repeat;
   }
-    @media screen and (min-width: 768px) {
-        width: 768px;
-        height: 349px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        padding-top: 12px;
-        padding-bottom: 5px;
-    }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    height: 349px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 12px;
+    padding-bottom: 5px;
+  }
 
-    @media screen and (min-width: 1200px) {
-        width: 1200px;
-        height: 586px;
-        padding-top: 41px;
-        padding-left: 16px;
-        padding-right: 16px;
-    }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    height: 586px;
+    padding-top: 41px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .hero_bgr {
@@ -170,21 +169,18 @@
     }
   }
 
-        @media screen and (min-width: 1200px) {
-            background-position: bottom left 652px, bottom 65px left 16px, bottom left;
-            background-size: 456px auto, 225px, 1200px 384px;
-            background-image: url('../images/hero/hero-desk.png'),
-                url('../images/hero/dish-desk.png'),
-                url('../images/hero/points-desk.svg');
-    
-            @media (-webkit-device-pixel-ratio: 2),
-            (min-reolution: 2dppx) {
-                background-image: url('../images/hero/hero-desk2x.png'),
-                    url('../images/hero/dish-desk2x.png'),
-                    url('../images/hero/points-desk.svg');
-            }
-        }
+  @media screen and (min-width: 1200px) {
+    background-position: bottom left 652px, bottom 65px left 16px, bottom left;
+    background-size: 456px auto, 225px, 1200px 384px;
+    background-image: url('../images/hero/hero-desk.png'),
+      url('../images/hero/dish-desk.png'), url('../images/hero/points-desk.svg');
 
+    @media (-webkit-device-pixel-ratio: 2), (min-reolution: 2dppx) {
+      background-image: url('../images/hero/hero-desk2x.png'),
+        url('../images/hero/dish-desk2x.png'),
+        url('../images/hero/points-desk.svg');
+    }
+  }
 }
 
 // Components
@@ -217,235 +213,231 @@
 
     span {
       font-size: 33px;
-    width: 367px;
-    font-family: 'Seymour One', 'Arial Black', sans-serif;
-    font-size: 26px;
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    margin-bottom: 28px;
+      width: 367px;
+      font-family: 'Seymour One', 'Arial Black', sans-serif;
+      font-size: 26px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
 
-    @media screen and (min-width: 768px){
+      @media screen and (min-width: 768px) {
         margin-bottom: 24px;
-    }
+      }
 
-    @media screen and (max-width: 1199px) {
-        h1{
-            font-size: 26px;
-            line-height: 1.26;
-            margin-bottom: 5px;
+      @media screen and (max-width: 1199px) {
+        h1 {
+          font-size: 26px;
+          line-height: 1.26;
+          margin-bottom: 5px;
         }
 
         p {
-            line-height: 1.0;
-             span {
+          line-height: 1;
+          span {
             font-size: 33px;
-            }
+          }
         }
-    }
+      }
 
-    @media screen and (min-width: 1200px) {
+      @media screen and (min-width: 1200px) {
         margin-bottom: 28px;
-        h1, 
+        h1,
         p {
-            font-size: 38px;
-            line-height: 1.26;
+          font-size: 38px;
+          line-height: 1.26;
         }
+      }
     }
   }
-}
 
-.hero_wrap {
-  width: 247px;
+  .hero_wrap {
+    width: 247px;
 
-  @media screen and (min-width: 768px) {
-    margin-bottom: 39px;
-  }
     @media screen and (min-width: 768px) {
-        margin-bottom: 39px;
+      margin-bottom: 39px;
+    }
+    @media screen and (min-width: 768px) {
+      margin-bottom: 39px;
     }
 
     @media screen and (min-width: 1200px) {
-        width: 280px;
-        margin-bottom: 109px;
+      width: 280px;
+      margin-bottom: 109px;
     }
-}
-
-.hero__btn {
-  @include buttons(108px, 12px, transparent);
-  @extend %cursor;
-  margin-right: 12px;
-
-  @media screen and (min-width: 768px) {
   }
 
-  // @media screen and (max-width: 1200px) {
-  //     width: 120px;
-  // }
+  .hero__btn {
+    @include buttons(108px, 12px, transparent);
+    @extend %cursor;
+    margin-right: 12px;
+
+    @media screen and (min-width: 768px) {
+    }
+
+    // @media screen and (max-width: 1200px) {
+    //     width: 120px;
+    // }
     @media screen and (min-width: 1200px) {
-        @include buttons(134px, 14px, transparent);
-        margin-right: 34px;
+      @include buttons(134px, 14px, transparent);
+      margin-right: 34px;
     }
-}
-
-.hero__link {
-  color: getColor('basic-yellow');
-  font-size: 12px;
-  line-height: 1.26;
-  text-decoration: underline;
-  vertical-align: baseline;
-  @extend %cursor;
-
-  &:hover {
-    color: getColor('ellipse-green');
   }
 
-  &:focus {
-    color: getColor('basic-white');
-  }
+  .hero__link {
+    color: getColor('basic-yellow');
+    font-size: 12px;
+    line-height: 1.26;
+    text-decoration: underline;
+    vertical-align: baseline;
+    @extend %cursor;
 
-  &:disabled {
-    color: getColor('basic-grey');
-  }
-}
+    &:hover {
+      color: getColor('ellipse-green');
+    }
 
-.hero__presentation {
-  width: 139px;
-  height: 125px;
-  font-size: 12px;
-  margin-left: 184px;
     &:focus {
-        color: getColor('basic-white');
+      color: getColor('basic-white');
     }
-    
+
     &:disabled {
-        color: getColor('basic-grey');
+      color: getColor('basic-grey');
+    }
+  }
+
+  .hero__presentation {
+    width: 139px;
+    height: 125px;
+    font-size: 12px;
+    margin-left: 184px;
+    &:focus {
+      color: getColor('basic-white');
+    }
+
+    &:disabled {
+      color: getColor('basic-grey');
     }
 
     @media screen and (min-width: 1200px) {
-        font-size: 14px;
+      font-size: 14px;
     }
-}
+  }
 
-.hero__presentation {
+  .hero__presentation {
     width: 139px;
     // height: 125px;
     font-size: 12px;
     margin-left: 184px;
-        p {
-            margin-bottom: 20px;
-        }
+    p {
+      margin-bottom: 20px;
+    }
 
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
+    .icon {
+      display: inline-block;
+      stroke-width: 0;
+      stroke: currentColor;
+      fill: currentColor;
+      color: getColor('basic-white');
+    }
+    @media screen and (min-width: 1200px) {
+      width: 200px;
+      font-size: 14px;
+      margin-left: 257px;
+      p {
+        margin-bottom: 32px;
+      }
+    }
+
+    .icon {
+      width: 40px;
+      height: 12px;
+      display: inline-block;
+      stroke-width: 0;
+      stroke: currentColor;
+      fill: currentColor;
+      color: getColor('basic-white');
+    }
+  }
+
+  .hero__service {
+    width: 46px;
+    list-style: none;
+    align-self: flex-end;
+    margin-top: 16px;
+
+    .service_number {
+      color: getColor('sec-black');
+      font-weight: 900;
+      font-size: 28px;
+      line-height: 1.36;
+    }
+
+    .service_type {
+      color: getColor('basic-white');
+      font-weight: 400;
+      font-size: 8px;
+      line-height: 1.25;
+    }
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  // body {
+  //     font-family: Montserrat, Arial, Helvetica, sans-serif;
+  //     color: $text-black;
+  //     font-weight: 400;
+  //     font-size: 14px;
+  //     line-height: 1.75;
+  //     letter-spacing: 0.04em;
+  //     background-color: $backgr-page-and-reviews;
+  // }
   @media screen and (max-width: 767px) {
     display: none;
   }
 
-  .icon {
+  @media screen and (min-width: 1200px) {
+    width: 79px;
+    .service_number {
+      font-size: 46px;
+    }
+
+    .service_type {
+      font-size: 14px;
+    }
+  }
+}
+
+//  Примеры
+.bac {
+  height: 380px;
+  color: black;
+}
+
+.background {
+  width: 100%;
+  height: 1053px;
+  position: absolute;
+  top: 1700px;
+  left: 0;
+  background-color: white;
+  background-image: url('../images/body/background-desk.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.btn-ex {
+  @include buttons(196px, 14px, red);
+  .icon-ex {
     display: inline-block;
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
-    color: getColor('basic-white');
-  }
-    @media screen and (min-width: 1200px) {
-        width: 200px;
-        font-size: 14px;
-        margin-left: 257px;
-        p {
-            margin-bottom: 32px;
-        }
-    }
-
-    .icon {
-        width: 40px;
-        height: 12px;
-        display: inline-block;
-        stroke-width: 0;
-        stroke: currentColor;
-        fill: currentColor;
-        color: getColor('basic-white');
-    }
-}
-
-.hero__service {
-  width: 46px;
-  list-style: none;
-  align-self: flex-end;
-  margin-top: 16px;
-
-  .service_number {
-    color: getColor('sec-black');
-    font-weight: 900;
-    font-size: 28px;
-    line-height: 1.36;
-  }
-
-  .service_type {
-    color: getColor('basic-white');
-    font-weight: 400;
-    font-size: 8px;
-    line-height: 1.25;
-  }
-
-  @media screen and (max-width: 767px) {
-    display: none;
   }
 }
-
-// body {
-//     font-family: Montserrat, Arial, Helvetica, sans-serif;
-//     color: $text-black;
-//     font-weight: 400;
-//     font-size: 14px;
-//     line-height: 1.75;
-//     letter-spacing: 0.04em;
-//     background-color: $backgr-page-and-reviews;
-// }
-    @media screen and (max-width: 767px) {
-            display: none;
-    }
-
-    @media screen and (min-width: 1200px) {
-        width: 79px;
-        .service_number {
-            font-size: 46px;
-        }
-    
-        .service_type {
-            font-size: 14px;
-        }
-    }
-}
-
-
-//  Примеры
-.bac {
-    height: 380px;
-    color: black;
-}
-
-.background {
-    width: 100%;
-    height: 1053px;
-    position: absolute;
-    top: 1700px;
-    left: 0;
-    background-color: white;
-    background-image: url('../images/body/background-desk.png');
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-}
-
-.btn-ex {
-    @include buttons(196px, 14px, red);
-        .icon-ex {
-            display: inline-block;
-            stroke-width: 0;
-            stroke: currentColor;
-            fill: currentColor;
-            
-        }
-}
-
-
