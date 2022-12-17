@@ -1,14 +1,14 @@
-.header {
+.header__container {
     @include container;
     padding-top: 12px;
     @include mq(tablet) {
-      padding-top: 20px;
+        padding-top: 20px;
     }
     @include mq(desktop) {
       padding-top: 10px;
     }
-    @include flex(flex, false, false, false, false, false);
-    z-index: 100;
+    @include flex;
+    z-index: 1;
   }
   .logo {
     @include flex;
@@ -23,14 +23,48 @@
       @include mq(desktop) {
         width: 60px;
         height: 65px;
-      }
     }
-  }
-  
-  .burger-menu {
+}
+}
+.header__container > .nav {
+    width: 100%;
+        @include mq(desktop,max){
+            display: none;
+        }
+    }
+.nav__list{
+ @include flex($indent:28px);
+}
+.nav__items{
+    @include mq(desktop){
+                @include fonts(
+                    $fw:700,
+                    $fs:16px,
+                    $lh:20px,
+                    $cl: getColor('basic-white')
+                    )
+                }
+                &-current {
+                    color: getColor('basic-yellow');
+                }  
+}
+.header__container > .buy__button{
+    @include mq(tablet){
+        margin-left: 32px;
+    }
+        @include mq(tablet,max){
+            display: none;
+        }
+    }
+    
+    .burger-menu {
+        display: none;
+    @include mq(desktop,max){
+    display: inline-flex;
     margin-left: auto;
     @include flex;
-  }
+    }
+    }
   .burger-menu__icon {
     fill: currentColor;
     width: 32px;
@@ -64,46 +98,65 @@
       pointer-events: visible;
     }
     &__head {
-      margin-bottom: 51px;
-      padding-top: 12px;
-      padding-left: 32px;
-      padding-right: 32px;
-      width: 100%;
-      @include flex;
+        margin-bottom: 51px;
+        padding-top: 12px;
+        padding-left: 32px;
+        padding-right: 32px;
+        width: 100%;
+        @include flex;
+        //   Должен быть на Таблетку
+          @include mq(tablet) {
+          margin-bottom: 76px;
+          padding-top: 20px;
+          padding-left: 32px;
+          padding-right: 32px;
+          width: 100%;
+          }
     }
-    &__close {
-      background-color: transparent;
+      &__close {
+          background-color: transparent;
       border: none;
       margin-left: auto;
       &-icon {
         fill: currentColor;
         width: 32px;
         height: 32px;
-      }
     }
+}
   
     & .nav {
-      margin-left: auto;
+        margin-left: auto;
       margin-right: auto;
       margin-bottom: 100px;
       & .nav__list {
         @include flex($fd: column, $indent: 32px);
+        @include mq(tablet){
+            @include flex($fd:column,$indent:40px);
+        }
         & .nav__items {
           @include fonts(
-            $fw: 700,
-            $fs: 32px,
-            $lh: 39px,
-            $cl: getColor('basic-white')
-          );
-          &-current {
-            color: getColor('sec-black');
-          }
+              $fw: 700,
+              $fs: 32px,
+              $lh: 39px,
+              $cl: getColor('basic-white')
+              );
+              @include mq(tablet){
+                  @include fonts(
+                      $fw:700,
+                      $fs:48px,
+                      $lh:59px,
+                      $cl: getColor('basic-white')
+                      )
+                    }
+                    &-current {
+                        color: getColor('sec-black');
+                    }
+                }
+            }
         }
-      }
     }
-  }
-  
-  .buy__button {
+
+    .buy__button {
     .mob-menu > & {
       margin-left: auto;
       margin-right: auto;
@@ -117,9 +170,13 @@
     border: none;
   
     &-icon {
-      fill: currentColor;
+        fill: currentColor;
       width: 6px;
       height: 10px;
     }
-  }
-  
+}
+.mob-menu > .buy__button{
+    @include mq(tablet,min){
+        display: none;
+    }   
+}
