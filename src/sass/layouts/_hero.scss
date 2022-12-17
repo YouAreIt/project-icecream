@@ -93,21 +93,21 @@
     }
 
     @media screen and (min-width: 768px) {
+        width: 768px;
+        height: 349px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        width: 768px;
-        height: 349px;
         padding-top: 12px;
         padding-bottom: 5px;
     }
 
     @media screen and (min-width: 1200px) {
         width: 1200px;
+        height: 586px;
+        padding-top: 41px;
         padding-left: 16px;
         padding-right: 16px;
-        background: url('../images/hero/hero-desk.png') bottom left 57%/55% auto no-repeat,
-                    url('../images/hero/points-desk.svg') bottom left/1200px 384px no-repeat;
     }
 }
 
@@ -149,6 +149,20 @@
         }
     }
 
+        @media screen and (min-width: 1200px) {
+            background-position: bottom left 652px, bottom 65px left 16px, bottom left;
+            background-size: 456px auto, 225px, 1200px 384px;
+            background-image: url('../images/hero/hero-desk.png'),
+                url('../images/hero/dish-desk.png'),
+                url('../images/hero/points-desk.svg');
+    
+            @media (-webkit-device-pixel-ratio: 2),
+            (min-reolution: 2dppx) {
+                background-image: url('../images/hero/hero-desk2x.png'),
+                    url('../images/hero/dish-desk2x.png'),
+                    url('../images/hero/points-desk.svg');
+            }
+        }
 
 }
 
@@ -159,29 +173,39 @@
 }
 
 .hero__heading {
-    width: 247px;
+    width: 367px;
     font-family: 'Seymour One', 'Arial Black', sans-serif;
     font-size: 26px;
     font-weight: 400;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
 
     @media screen and (min-width: 768px){
         margin-bottom: 24px;
     }
 
-    h1{
-        font-size: 26px;
-        line-height: 1.26;
-        margin-bottom: 5px;
+    @media screen and (max-width: 1199px) {
+        h1{
+            font-size: 26px;
+            line-height: 1.26;
+            margin-bottom: 5px;
+        }
+
+        p {
+            line-height: 1.0;
+             span {
+            font-size: 33px;
+            }
+        }
     }
 
-    p {
-        line-height: 1.0;
-
-        span {
-            font-size: 33px;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 28px;
+        h1, 
+        p {
+            font-size: 38px;
+            line-height: 1.26;
         }
     }
 }
@@ -192,6 +216,11 @@
     @media screen and (min-width: 768px) {
         margin-bottom: 39px;
     }
+
+    @media screen and (min-width: 1200px) {
+        width: 280px;
+        margin-bottom: 109px;
+    }
 }
 
 .hero__btn {
@@ -199,13 +228,10 @@
     @extend %cursor;
     margin-right: 12px;
 
-    @media screen and (min-width: 768px) {
-        
+    @media screen and (min-width: 1200px) {
+        @include buttons(134px, 14px, transparent);
+        margin-right: 34px;
     }
-
-    // @media screen and (max-width: 1200px) {
-    //     width: 120px;
-    // }
 }
 
 .hero__link {
@@ -227,19 +253,37 @@
     &:disabled {
         color: getColor('basic-grey');
     }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+    }
 }
 
 .hero__presentation {
     width: 139px;
-    height: 125px;
+    // height: 125px;
     font-size: 12px;
     margin-left: 184px;
+        p {
+            margin-bottom: 20px;
+        }
 
     @media screen and (max-width: 767px) {
         display: none;
     }
 
+    @media screen and (min-width: 1200px) {
+        width: 200px;
+        font-size: 14px;
+        margin-left: 257px;
+        p {
+            margin-bottom: 32px;
+        }
+    }
+
     .icon {
+        width: 40px;
+        height: 12px;
         display: inline-block;
         stroke-width: 0;
         stroke: currentColor;
@@ -271,19 +315,48 @@
     @media screen and (max-width: 767px) {
             display: none;
     }
+
+    @media screen and (min-width: 1200px) {
+        width: 79px;
+        .service_number {
+            font-size: 46px;
+        }
+    
+        .service_type {
+            font-size: 14px;
+        }
+    }
 }
 
 
+//  Примеры
+.bac {
+    height: 380px;
+    color: black;
+}
 
-// body {
-//     font-family: Montserrat, Arial, Helvetica, sans-serif;
-//     color: $text-black;
-//     font-weight: 400;
-//     font-size: 14px;
-//     line-height: 1.75;
-//     letter-spacing: 0.04em;
-//     background-color: $backgr-page-and-reviews;
-// }
+.background {
+    width: 100%;
+    height: 1053px;
+    position: absolute;
+    top: 1700px;
+    left: 0;
+    background-color: white;
+    background-image: url('../images/body/background-desk.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
 
+.btn-ex {
+    @include buttons(196px, 14px, red);
+        .icon-ex {
+            display: inline-block;
+            stroke-width: 0;
+            stroke: currentColor;
+            fill: currentColor;
+            
+        }
+}
 
 
