@@ -1,0 +1,23 @@
+.products-modal,
+.read-more-modal {
+  @include position(center);
+
+  padding: 50px;
+  color: red;
+  background-color: #fff;
+  border-radius: 20px;
+  min-height: 500px;
+  min-width: 300px;
+
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 300ms;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: initial;
+  }
+}

@@ -279,3 +279,17 @@ $breakpoints: (
     }
   }
 }
+
+// transitions mixin
+// миксин для правного перехода
+
+@mixin transitions($properties...) {
+  transition-property: $properties;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// пример применения:
+// @include transitions (background-color, fill, color);
+// указывается только то или те элементы, которые будут изменяться,
+// те, которые указаны в transition-property:
