@@ -1,1 +1,32 @@
+.about-modal {
+    @include position(center);
 
+    padding: 28px;
+    max-width: 280px;
+    max-height: 459px;
+    background-color: getColor('basic-white');
+    border: 2px solid getColor('basic-yellow');
+    border-radius: 10px;
+
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    @media screen and(min-width: 768px) {
+        padding: 32px 60px;
+        max-width: 568px;
+
+        
+    }
+
+}
+
+.about-modal__btn {}
+
+.about-modal__icon {}
+
+.about-modal__title {}
+
+.about-modal__video {}
+
+.about-modal__text {}
