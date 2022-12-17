@@ -425,7 +425,7 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
   box-sizing: border-box;
-  background-image: url(../src/images/gallery/backgroud_mobile.jpg);
+  background-image: url(./images/gallery/backgroud_mobile.jpg);
 }
 
 .container {
@@ -468,13 +468,13 @@ body {
 
 @media screen and (min-width: 768px) {
   .swiper-slide img {
-    width: 280px;
-    height: 130px;
+    width: 704px;
+    height: 327px;
     border-radius: 8px;
     -o-object-fit: cover;
        object-fit: cover;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 32px;
+    margin-right: 32px;
   }
 }
 .swiper {
