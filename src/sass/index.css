@@ -425,7 +425,7 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
   box-sizing: border-box;
-  background-image: url(url(../images/gallery/backgroud_mobile.jpg));
+  background-image: url(../src/images/gallery/backgroud_mobile.jpg);
 }
 
 .container {
@@ -448,6 +448,8 @@ body {
 
 .swiper {
   height: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .swiper-slide {
@@ -464,6 +466,17 @@ body {
   margin-right: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .swiper-slide img {
+    width: 280px;
+    height: 130px;
+    border-radius: 8px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
 .swiper {
   --swiper-theme-color: #84a178;
   width: 600px;

@@ -1,7 +1,7 @@
 .gallery {
     @include section-indent;
     box-sizing: border-box;
-    background-image: url(url(../images/gallery/backgroud_mobile.jpg));
+    background-image: url(../src/images/gallery/backgroud_mobile.jpg);
 }
 
 .container {
@@ -10,6 +10,8 @@
 
 .swiper {
     height: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 // .swiper-wrapper {
@@ -30,4 +32,13 @@
     margin-right: 20px;
 }
 
-
+@media screen and (min-width: 768px) {
+    .swiper-slide img {
+    width: 280px;
+    height: 130px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-left: 20px;
+    margin-right: 20px;
+} 
+}
