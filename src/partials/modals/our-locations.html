@@ -1,1 +1,29 @@
+<div class="location-modal js-modal" data-modal="location-modal">
+  <button class="location-modal__btn" type="button" data-modal-close>
+    <svg class="location-modal__icon">
+      <use href="./images/sprite.svg#modal-close-icon"></use>
+    </svg>
+  </button>
 
+  <strong class="location-modal__title">Our locations</strong>
+  <form action="location-modal__form">
+    <div id="location-modal__map">
+      <iframe
+        class="map"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24606.58281635006!2d34.548242853382575!3d49.5892928615917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2spl!4v1671123509091!5m2!1sru!2spl"
+        width="448"
+        height="260"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </form>
+  <form
+    action="https://www.google.com/maps/@49.5966284,34.5622188,13z"
+    target="_blank"
+  >
+    <button class="location-modal__btn-map">Open map</button>
+  </form>
+</div>
