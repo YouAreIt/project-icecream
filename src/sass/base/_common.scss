@@ -6,15 +6,17 @@ body {
   color: getColor('basic-white');
   font-family: $basic-font, sans-serif;
 
-  background-color: getColor('sec-green');
+  // background-color: getColor('sec-green');
 
-  // background-image: url('../images/body/bg-icecreem-480.svg');
+  background-image: url('../images/body/bg-icecreem-480.svg');
+  background-repeat: repeat;
+  background-position: top center;
 
-  // @include mq(tablet) {
-  //   background-image: url('../images/body/bg-icecreem-768.svg');
-  // }
+  @include mq(tablet) {
+    background-image: url('../images/body/bg-icecreem-768.svg');
+  }
 
-  // @include mq(desktop) {
-  //   background-image: url('../images/body/bg-icecreem-1200.svg');
-  // }
+  @include mq(desktop) {
+    background-image: url('../images/body/bg-icecreem-1200.svg');
+  }
 }
