@@ -18,7 +18,8 @@
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001439",
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "element-closest": "^3.0.2",
     "modern-normalize": "^1.1.0",
     "swiper": "^8.4.5"
   },

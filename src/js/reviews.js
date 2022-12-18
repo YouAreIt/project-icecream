@@ -1,14 +1,28 @@
 // core version + navigation, pagination modules:
-import Swiper, { Pagination } from 'swiper';
+import Swiper, { EffectCreative, Pagination } from 'swiper';
 // import Swiper and modules styles
-import '~node_modules/swiper/swiper-bundle.min.css';
 
 // init Swiper:
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.reviews__swiper', {
   // configure Swiper to use modules
-  modules: [Pagination],
+  modules: [Pagination, EffectCreative],
+
+  grabCursor: true,
+  loop: true,
+  effect: 'creative',
+  centeredSlides: true,
 
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  creativeEffect: {
+    prev: {
+      translate: ['-120%', 0, -450],
+    },
+    next: {
+      translate: ['120%', 0, -450],
+    },
   },
 });

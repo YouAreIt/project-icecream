@@ -1,0 +1,135 @@
+.about {
+  @include section-indent;
+  background-color: getColor('basic-green');
+}
+.about__container {
+  @include container;
+
+  @media screen and(max-width: 767.98px) {
+    text-align: center;
+  }
+}
+
+.about__label {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+
+  @media screen and (min-width: 768px) {
+    font-weight: 800;
+    font-size: 22px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+  }
+}
+
+.about__title {
+  font-family: Seymour One;
+  font-size: 30px;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0 auto;
+  margin-bottom: 32px;
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    max-width: 200px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 34px;
+    letter-spacing: 0.06em;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+  }
+}
+
+.about__picture {
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.about__wrapper {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    gap: 38px;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    gap: 109px;
+  }
+}
+
+.about__content-wrapper {
+  @media screen and (min-width: 768px) {
+    width: 334px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 463px;
+  }
+}
+
+.about__content-text {
+  margin-bottom: 8px;
+
+  font-size: 12px;
+  line-height: 1.76;
+  letter-spacing: 0.04em;
+
+  @media screen and(min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.94;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+
+    @media screen and(max-width: 767.98px) {
+      display: none;
+    }
+  }
+}
+
+.about__btn {
+  width: 164px;
+  height: 42px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: getColor('basic-yellow');
+  margin: 0 auto;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+
+  @media screen and (min-width: 768px) {
+    margin-left: initial;
+    margin-top: 32px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 54px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: getColor('ellipse-green');
+  }
+}
+
+.about__btn-icon {
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
+}
