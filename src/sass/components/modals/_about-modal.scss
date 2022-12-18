@@ -1,9 +1,6 @@
 .about-modal {
   @include position(center);
 
-  padding: 28px;
-  max-width: 280px;
-  max-height: 459px;
   background-color: getColor('basic-white');
   border: 2px solid getColor('basic-yellow');
   border-radius: 10px;
@@ -12,10 +9,12 @@
   // opacity: 0;
   pointer-events: none;
 
-  @media screen and(min-width: 768px) {
+  padding: 28px;
+  width: 280px;
+
+  @include mq(tablet) {
     padding: 32px 60px;
-    max-width: 568px;
-    max-height: 449px;
+    width: 568px;
   }
 }
 
@@ -28,54 +27,41 @@
   border: none;
 }
 
-.about-modal__icon {
-  width: 20px;
-  height: 20px;
-}
-
 .about-modal__title {
   font-family: 'Seymour One', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: calc(24 / 16);
-
-  margin-bottom: 20px;
+  @include fonts($fs: 16px, $lh: 24px);
+  color: getColor('sec-black');
   text-align: center;
 
-  color: getColor('sec-black');
+  margin-bottom: 20px;
 
-  @media screen and(min-width: 768px) {
-    font-size: 20px;
-    line-height: calc(28 / 20);
+  @include mq(tablet) {
+    @include fonts($fs: 20px, $lh: 28px);
 
     margin-bottom: 32px;
   }
 }
 
 .about-modal__video {
-  padding: 0;
-  margin-bottom: 20px;
-  max-width: 224px;
-  max-height: 199px;
-
   border-radius: 10px;
 
-  @media screen and(min-width: 768px) {
+  width: 224px;
+  height: 198px;
+  margin-bottom: 20px;
+
+  @include mq(tablet) {
+    width: 448px;
+    height: 205px;
     margin-bottom: 32px;
-    max-width: 448px;
-    max-height: 205px;
   }
 }
 
 .about-modal__text {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 140%;
+  @include fonts($fs: 14px, $lh: 20px);
 
   color: getColor('sec-black');
 
-  @media screen and(min-width: 768px) {
-    font-size: 16px;
+  @include mq(tablet) {
+    @include fonts($fs: 16px, $lh: 22px);
   }
 }

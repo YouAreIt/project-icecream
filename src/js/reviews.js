@@ -3,7 +3,7 @@ import Swiper, { EffectCreative, Pagination } from 'swiper';
 // import Swiper and modules styles
 
 // init Swiper:
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.reviews__swiper', {
   // configure Swiper to use modules
   modules: [Pagination, EffectCreative],
 

@@ -231,10 +231,8 @@ $breakpoints: (
 // в примере изменится размер шрифта и пересчитается величина
 // пространства между строками.
 
-
-
 // transitions mixin
-// миксин для правного перехода
+// миксин для плавного перехода
 
 @mixin transitions($properties...) {
   transition-property: $properties;
@@ -245,4 +243,54 @@ $breakpoints: (
 // пример применения:
 // @include transitions (background-color, fill, color);
 // указывается только то или те элементы, которые будут изменяться,
-// те, которые указаны в transition-property: 
+// те, которые указаны в transition-property:
+
+/* миксин для стилизации кнопок */
+@mixin buttons(
+  $width-btn: 108px,
+  $font-size-btn: 14px,
+  $backgr-color: getColor('basic-yellow')
+) {
+  width: $width-btn;
+  height: 42px;
+  font: inherit;
+  color: getColor('sec-black');
+  font-weight: 600;
+  font-size: $font-size-btn;
+  line-height: 1.28;
+  border-radius: 10px;
+  border-color: transparent;
+
+  &:focus {
+    color: getColor('sec-white');
+  }
+  &:focus-visible {
+    outline: none;
+  }
+
+  @if ($backgr-color == getColor('basic-yellow')) {
+    background-color: getColor('basic-yellow');
+    border: none;
+
+    &:hover,
+    &:focus {
+      background-color: getColor('ellipse-green');
+    }
+
+    &:disabled {
+      background-color: getColor('basic-grey');
+    }
+  } @else {
+    background-color: transparent;
+    border: 2px solid getColor('basic-yellow');
+
+    &:hover,
+    &:focus {
+      border-color: getColor('ellipse-green');
+    }
+
+    &:disabled {
+      border-color: getColor('basic-grey');
+    }
+  }
+}
