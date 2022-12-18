@@ -1,32 +1,38 @@
 <header class="header" id="home">
   <div class="header__container">
-    <div class="logo">
-      <a href="#home"
-        ><img class="logo__img" src="images/header/logo.png" alt="Logo" />
-      </a>
-    </div>
+    <a class="logo" href="#home">
+      <img class="logo__img" src="images/header/logo.png" alt="Logo" />
+    </a>
+
     <nav class="nav">
       <ul class="nav__list">
-        <li class="nav__items"><a class="nav__link" href="/">Home</a></li>
-        <li class="nav__items nav__items-current">
-          <a class="nav__link" href="/">How it's made</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#home">Home</a>
         </li>
-        <li class="nav__items">
-          <a class="nav__link" href="/">Our products</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#bout">How it's made</a>
         </li>
-        <li class="nav__items"><a class="nav__link" href="/">Contacts</a></li>
+        <li class="nav__item">
+          <a class="nav__link" href="#products">Our products</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#contacts">Contacts</a>
+        </li>
       </ul>
     </nav>
-    <div
+
+    <button
       class="burger-menu js-open-menu"
+      type="button"
       aria-expanded="false"
       aria-controls="mobile-menu"
     >
       <svg class="burger-menu__icon">
-        <use href="./images/sprite.svg#burger_icon" class="icon__burger"></use>
+        <use class="icon__burger" href="./images/sprite.svg#burger_icon"></use>
       </svg>
-    </div>
-    <button type="button" class="buy__button">
+    </button>
+
+    <button class="buy__button" type="button">
       Buy now
       <svg class="buy__button-icon">
         <use href="./images/sprite.svg#icon-vector"></use>

@@ -1,29 +1,26 @@
 .header__container {
+  @include flex;
   @include container;
   padding-top: 12px;
+
   @include mq(tablet) {
     padding-top: 20px;
   }
+
   @include mq(desktop) {
     padding-top: 10px;
   }
-  @include flex;
-  z-index: 1;
 }
 .logo {
   @include flex;
-  &__img {
-    width: 40px;
-    height: 38px;
-    color: getColor('basic-yellow');
-    @include mq(tablet) {
-      width: 48px;
-      height: 44px;
-    }
-    @include mq(desktop) {
-      width: 60px;
-      height: 65px;
-    }
+  width: 40px;
+
+  @include mq(tablet) {
+    width: 48px;
+  }
+
+  @include mq(desktop) {
+    width: 60px;
   }
 }
 .header__container > .nav {
@@ -35,7 +32,7 @@
 .nav__list {
   @include flex($indent: 28px);
 }
-.nav__items {
+.nav__link {
   @include mq(desktop) {
     @include fonts(
       $fw: 700,
@@ -44,31 +41,65 @@
       $cl: getColor('basic-white')
     );
   }
-  &-current {
+
+  &:hover,
+  &:focus {
     color: getColor('basic-yellow');
   }
 }
-.header__container > .buy__button {
-  @include mq(tablet) {
-    margin-left: 32px;
+
+.buy__button {
+  @include flex($indent: 4px);
+  @include fonts($fw: 600, $lh: 17px, $cl: getColor('basic-black'));
+
+  width: 152px;
+  height: 42px;
+  background-color: getColor('basic-yellow');
+  border-radius: 10px;
+  border: none;
+
+  .header__container > & {
+    @include mq(tablet) {
+      margin-left: 32px;
+    }
+    @include mq(tablet, max) {
+      display: none;
+    }
   }
-  @include mq(tablet, max) {
-    display: none;
+
+  .mob-menu > & {
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq(tablet, min) {
+      display: none;
+    }
+  }
+
+  &-icon {
+    fill: currentColor;
+    width: 6px;
+    height: 10px;
   }
 }
 
 .burger-menu {
   display: none;
+
   @include mq(desktop, max) {
-    display: inline-flex;
+    @include flex(inline-flex);
     margin-left: auto;
-    @include flex;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: getColor('basic-white');
   }
-}
-.burger-menu__icon {
-  fill: currentColor;
-  width: 32px;
-  height: 32px;
+
+  &__icon {
+    fill: currentColor;
+    width: 32px;
+    height: 32px;
+  }
 }
 
 // modal window
@@ -85,6 +116,7 @@
   transform: scale(0);
   @include flex($fd: column, $ai: flex-start, $jc: flex-start);
   background-color: getColor('basic-green');
+
   @include mq(tablet) {
     background-color: getColor('mob-menu-tablet-green');
   }
@@ -97,6 +129,7 @@
     visibility: visible;
     pointer-events: visible;
   }
+
   &__head {
     margin-bottom: 51px;
     padding-top: 12px;
@@ -113,6 +146,7 @@
       width: 100%;
     }
   }
+
   &__close {
     background-color: transparent;
     border: none;
@@ -128,55 +162,32 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 100px;
-    & .nav__list {
+
+    &__list {
       @include flex($fd: column, $indent: 32px);
+
       @include mq(tablet) {
         @include flex($fd: column, $indent: 40px);
       }
-      & .nav__items {
+    }
+    &__link {
+      @include fonts(
+        $fw: 700,
+        $fs: 32px,
+        $lh: 39px,
+        $cl: getColor('basic-white')
+      );
+      @include mq(tablet) {
         @include fonts(
           $fw: 700,
-          $fs: 32px,
-          $lh: 39px,
+          $fs: 48px,
+          $lh: 59px,
           $cl: getColor('basic-white')
         );
-        @include mq(tablet) {
-          @include fonts(
-            $fw: 700,
-            $fs: 48px,
-            $lh: 59px,
-            $cl: getColor('basic-white')
-          );
-        }
-        &-current {
-          color: getColor('sec-black');
-        }
+      }
+      &-current {
+        color: getColor('sec-black');
       }
     }
-  }
-}
-
-.buy__button {
-  .mob-menu > & {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  width: 152px;
-  height: 42px;
-  @include flex($indent: 4px);
-  background: getColor('basic-yellow');
-  border-radius: 10px;
-  @include fonts($fw: 600, $lh: 17px, $cl: getColor('basic-black'));
-  border: none;
-
-  &-icon {
-    fill: currentColor;
-    width: 6px;
-    height: 10px;
-  }
-}
-.mob-menu > .buy__button {
-  @include mq(tablet, min) {
-    display: none;
   }
 }
