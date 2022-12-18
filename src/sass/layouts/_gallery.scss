@@ -1,7 +1,7 @@
 .gallery {
   @include section-indent;
   background-image: linear-gradient(
-    getColor('basic-green') 200px,
+    getColor('sec-green') 200px,
     transparent 200px
   );
 }
