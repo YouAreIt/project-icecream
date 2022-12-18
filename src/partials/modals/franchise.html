@@ -1,13 +1,16 @@
 
-<div class="backdrop is-hidden" data-modal>
-    <div class="modal">
-      <button class="modal__btn--close" data-modal-close>
-        <svg class="modal__icon--close" width="24" height="24">
-          <use href=""></use>
+    <div class=" backdrop is-hidden franchise-modal" data-modal="contacts-modal-franchise">
+      <button class="franchise-modal__btn" type="button"  data-modal-close>
+        <svg class="franchise-modal__icon" width="24" height="24">
+          <use href="./images/sprite.svg#products-close-icon"></use>
         </svg>
       </button>
-      <p class="modal__text">Thank you for your interest in owning an Ice Cream shop</p>
-      <p class="modal__text--paragraph">Due to the overwhelming volume of franchise requests we are not accepting new franchisee applications at this time. Once the application process resumes, we will contact you for further information. Please fill out the contact information below and we will reach out for additional information. We appreciate your patience.</p>
+      <div class="franchise-modal__container">
+      <p class="franchise-modal__text">Thank you for your interest in owning an Ice Cream shop</p>
+      </div>
+      <div class="franchise-modal__container--second">
+      <p class="franchise-modal__text--paragraph">Due to the overwhelming volume of franchise requests we are not accepting new franchisee applications at this time. Once the application process resumes, we will contact you for further information. Please fill out the contact information below and we will reach out for additional information. We appreciate your patience.</p>
+      </div>
       <form name="contacts-modal-name" class="form">
         <div class="form-field__container">
           <div class="form-field">
@@ -45,4 +48,3 @@
       </form>
      
     </div>
-  </div>

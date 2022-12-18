@@ -7,8 +7,7 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
     z-index: 100;
-    transition: opacity var(--transition-dur-and-func),
-      visibility var(--transition-dur-and-func);
+    @include transitions (opacity, visibility);
 
       &.is-hidden {
         visibility: hidden;
@@ -19,29 +18,39 @@
   
 
 
-  .modal {
+  .franchise-modal {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 568px;
-    height: 668px;
-    padding: 32px;
+    width: 280px;
+    height: 674px;
+    padding: 28px;
   
-    background-color: var(--white);
+    background-color: getColor('basic-white');
 
-    background: #FCFCFC;
-    border: 2px solid #F8D24E;
+    background: getColor('basic-white');
+    border: 2px solid getColor('basic-yellow');
     border-radius: 10px;
+
+    @media screen and (min-width:768px) {
+   
+      width: 568px;
+      height: 668px;
+      padding: 32px;
+    
+   
+      
+    }
   }
   
   
-  .modal__btn--close {
+  .franchise-modal__btn{
     position: absolute;
     top: 8px;
     right: 8px;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background-color: transparent;
     padding: 0;
     display: flex;
@@ -53,55 +62,103 @@
 
     
     &:hover {
-      fill: #84A178;
+      fill: getColor('ellipse-green');
     }
     
-    &:hover .modal__icon--close  {
-      fill: #84A178;
+    &:hover .franchise-modal__icon  {
+      fill: getColor('ellipse-green');
     }
     
-    // &:focus {
-    //   // border-color: 1px solid rgba(0, 0, 0, 0.1);
-    // }
     
-    &:focus .modal__icon--close  {
-      fill: #84A178;
+    &:focus .franchise-modal__icon  {
+      fill: getColor('ellipse-green');
     } 
+
+    @media screen and (min-width:768px) {
+      width: 24px;
+      height: 24px;
+      
+    }
       
   }
   
-  .modal__icon--close {
-    width: 24px;
-    height: 24px;
+  .franchise-modal__icon {
+    width: 20px;
+    height: 20px;
     top: 0;
     right: 0;
+
+    @media screen and (min-width:768px) {
+      width: 24px;
+      height: 24px;
+    
+    }
+  }
+
+  .franchise-modal__container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .franchise-modal__container--second {
+    display: flex;
+    justify-content: center;
   }
   
+  
  
-  .modal__text {
-    font-family: 'Seymour One';
+  .franchise-modal__text {
+    font-family: 'Seymour One', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 1.5;
+
+    width: 221px;
+    height: 72px;
+
  
     
     display: flex;
     align-items: center;
     text-align: center;
     
-    color: #131313;
-    margin-bottom: 24px;
+    color: getColor('sec-black');
+    margin-bottom: 20px;
+
+    @media screen and (min-width:768px) {
+      font-size: 20px;
+      line-height: 1.4;
+      width: 322px;
+      height: 84px;
+      margin-bottom: 24px;
+      
+    }
   }
 
-  .modal__text--paragraph {
-    font-family: 'Montserrat';
+  .franchise-modal__text--paragraph {
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 140%;
-    color: #131313;
-    margin-bottom: 32px;
+    color: getColor('sec-black');
+    margin-bottom: 24px;
+
+    width: 222px;
+    height: 240px;
+
+    @media screen and (min-width:768px) {
+      font-size: 16px;
+      line-height: 140%;
+  
+      width: 448px;
+      height: 132px;
+      margin-bottom: 32px;
+  
+      }
+
   }
 
 
@@ -110,27 +167,29 @@
     justify-content: center;
     align-items: center;
 
+
     &:not(:last-child) {
-      margin-bottom: 16px;
+      margin-bottom: 12px;
+    }
+
+   @media screen and (min-width:768px) {
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+      
     }
   }
   
   .form-field__container {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
+
+    @media screen and (min-width:768px) {
+      margin-bottom: 32px;
+      
+    }
   } 
   
-
-
-  
-  // .form-field__name {
-  //   display: block;
-  //   margin-bottom: 4px;
-  //   font-weight: 400;
-  //   font-size: 12px;
-  //   line-height: calc(14 / 12);
-  
-  //   color: var(--broun);
-  // }
   
 
   .form-field__box{
@@ -139,79 +198,75 @@
   }
   
   .form-field__input {
-
-
-    // font-family: 'Montserrat';
-    // font-style: normal;
-    // font-weight: 400;
-    // font-size: 14px;
-    // line-height: 140%;
-    // color: #131313;
-
-
-
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 368px;
-    height: 42px;  
+
+    width: 224px;
+    height: 32px; 
     background: rgba(248, 210, 78, 0.1);
-    border: 1px solid #84A178;
+    border: 1px solid getColor('sec-green');
     border-radius: 10px;
     cursor: pointer;
   
-    padding: 11px 16px;
-    transition: border-color var(--transition-dur-and-func);
+    padding: 8px 12px;
+    @include transitions (border-color);
 
     &:hover {
-      border-color: #84A178;
+      border-color: getColor('ellipse-green');
     }
     
     &:hover + .form-field__icons {
-      fill:  #84A178;
+      fill: getColor('ellipse-green');
     }
     
     &:focus {
-      border-color: #84A178;
+      border-color: getColor('ellipse-green');
     }
     
     &:focus + .form-field__icons {
-      fill:  #84A178;
-      border-color:   #84A178;
+      fill:  getColor('ellipse-green');
+      border-color:  getColor('ellipse-green');
     }
 
     &::placeholder {
-      font-family: 'Montserrat';
+      font-family: 'Montserrat', sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 14px;
       line-height: 140%;
-      color: #131313;
+      color: getColor('sec-black');
+    }
+
+    @media screen and (min-width:768px) {
+      width: 368px;
+      height: 42px;  
+      padding: 11px 16px;
+      
     }
   }
   
   
   .form-field__textarea {
-    width: 368px;
-    height: 84px;
-    left: 100px;
-    top: 478px;
+    width: 224px;
+    height: 64px; 
+  
 
     background: rgba(248, 210, 78, 0.1);
-    border: 1px solid #84A178;
+    border: 1px solid getColor('sec-green');
     border-radius: 10px;
    
     resize: none;
     cursor: pointer;
-    padding: 11px 16px;
+    padding: 8px 12px;
 
     &::placeholder {
-        font-family: 'Montserrat';
+        font-family: 'Montserrat', sans-serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 140%;
-        color: #131313;
+        color: getColor('sec-black');
       }
       
       &:focus::placeholder {
@@ -220,7 +275,14 @@
 
       &:hover,
       &:focus {
-        border-color: var(--blue);
+        border-color: getColor('ellipse-green');
+      }
+
+      @media screen and (min-width:768px) {
+        width: 368px;
+        height: 84px;
+        padding: 11px 16px;
+        
       }
     
   }
@@ -228,12 +290,18 @@
 
   
   .placeholder {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: getColor('sec-black');
+
+    @media screen and (min-width:768px) {
     font-size: 14px;
     line-height: 140%;
-    color: #131313;
+      
+    }
   }
 
 
@@ -244,42 +312,45 @@
     margin: 0 auto;
     width: 121px;
     height: 42px;
-    left: 224px;
-    top: 594px;
-    
-    background: #F8D24E;
+   
+    background: getColor('basic-yellow');
     border-radius: 10px;
     border: none;
   
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 12px;
+    line-height: 1.25;
     display: flex;
     align-items: center;
     text-align: center;
 
-    color: #131313;
+    color: getColor('sec-black');
     cursor: pointer;
 
     padding: 12px 14px;
-    transition: color var(--transition-dur-and-func),
-      box-shadow var(--transition-dur-and-func),
-      background-color var(--transition-dur-and-func);
+ 
+   @include transitions (color, box-shadow, background-color);
 
       &:hover {
-        background-color: #84A178;
-
-       
+        background-color: getColor('sec-green');
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border: getColor('ellipse-green');
         border-radius: 10px;
-        border-color: #0A8817;
-        color: #000000;
+        border-color: getColor('ellipse-green');
+        color: getColor('sec-black');
       }
       
       &:focus {
-        background-color: #84A178;
+        background-color: getColor('ellipse-green');
+      }
+
+      @media screen and (min-width:768px) {
+
+        font-size: 14px;
+        line-height: 1.21;
+        
       }
       
   }
