@@ -1,3 +1,8 @@
+.hero {
+  width: 100%;
+  background-color: getColor('sec-green');
+}
+
 .hero_container {
   margin-left: auto;
   margin-right: auto;
@@ -87,11 +92,6 @@
 }
 
 // Components
-
-.hero {
-  width: 100%;
-  background-color: getColor('basic-green');
-}
 
 .hero__heading {
   width: 367px;

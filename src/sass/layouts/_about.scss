@@ -1,6 +1,6 @@
 .about {
   @include section-indent;
-  background-color: getColor('basic-green');
+  background-color: getColor('sec-green');
 }
 .about__container {
   @include container;
