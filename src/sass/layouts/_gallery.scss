@@ -1,44 +1,11 @@
 .gallery {
-    @include section-indent;
-    box-sizing: border-box;
-    background-image: url(../images/gallery/backgroud_mobile.jpg);
+  @include section-indent;
+  background-image: linear-gradient(
+    getColor('basic-green') 200px,
+    transparent 200px
+  );
 }
 
-.container {
-    @include container;
-}
-
-.swiper {
-    height: 100%;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-// .swiper-wrapper {
-//     margin-left: 20px;
-//     margin-right: 20px;
-// }
-
-.swiper-slide {
-    margin-top: -98px;
-}
-
-.swiper-slide img {
-    width: 280px;
-    height: 130px;
-    border-radius: 8px;
-    object-fit: cover;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-@media screen and (min-width: 768px) {
-    .swiper-slide img {
-    width: 704px;
-    height: 327px;
-    border-radius: 8px;
-    object-fit: cover;
-    margin-left: 32px;
-    margin-right: 32px;
-} 
+.gallery__container {
+  @include container;
 }

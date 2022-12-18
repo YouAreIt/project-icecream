@@ -1,3 +1,7 @@
+.header {
+  background-color: getColor('basic-green');
+}
+
 .header__container {
   @include flex;
   @include container;
