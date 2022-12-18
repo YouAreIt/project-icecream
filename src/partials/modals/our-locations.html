@@ -1,44 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Seymour+One&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script defer type="module" src="./index.js"></script>
-</head>
-
-<body>
-    <button type="button" data-modal-open="location-modal">Our location</button>
-
-    <div class="overlay js-modal" data-modal="location-modal">
-
-        <div class="location__modal">
-            <!--   Svg иконка для закрытия окна  -->
-            <svg class="modal__icon" data-modal-close="location-modal">
-                <use href="./icons/sprite.svg#icon-close"></use>
-            </svg>
-            <strong class="modal__title">Our locations</strong>
-            <form action="location__form">
-                <div id="map">
-                    <iframe class="map"
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24606.58281635006!2d34.548242853382575!3d49.5892928615917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2spl!4v1671123509091!5m2!1sru!2spl"
-                        width="448" height="260" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </form>
-            <form action="https://www.google.com/maps/@49.5966284,34.5622188,13z" target="_blank">
-                <button class="map__btn">Open map</button>
-            </form>
-        </div>
+<div class="location-modal js-modal" data-modal="location-modal">
+  <!--   Svg иконка для закрытия окна  -->
+  <svg class="modal__icon" data-modal-close="location-modal">
+    <use href="../../images/sprite.svg#"></use>
+  </svg>
+  <strong class="modal__title">Our locations</strong>
+  <form action="location__form">
+    <div id="map">
+      <iframe
+        class="map"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24606.58281635006!2d34.548242853382575!3d49.5892928615917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2spl!4v1671123509091!5m2!1sru!2spl"
+        width="448"
+        height="260"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </div>
-
-</body>
-
-</html>
+  </form>
+  <form
+    action="https://www.google.com/maps/@49.5966284,34.5622188,13z"
+    target="_blank"
+  >
+    <button class="map__btn">Open map</button>
+  </form>
+</div>
