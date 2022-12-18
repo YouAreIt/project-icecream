@@ -1,15 +1,16 @@
-.footer {
-  @include container;  
+.footer { 
   background-color: getColor('sec-green');
 }
 
 .footer__container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+  @include container;
+}
 
-    @media screen and (min-width: 768px) {
-        flex-direction: row;
+.footer__wraper {
+    
+  @include mq(tablet, $type: min) {
+      display: flex;  
+      flex-direction: row;
     }
 }
 
@@ -19,13 +20,13 @@
   max-width: 232px;
   color: getColor('basic-white');
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet, $type: min) {
     @include fonts($fw: 700, $fs: 26px, $lh: 32px, $ls: 0.04em);
     max-width: 352px;
     margin-bottom: 8px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq (desktop, $type: min) {
     @include fonts($fw: 400, $fs: 30px, $lh: 37px, $ls: 0.04em);
     max-width: 504px;
     margin-bottom: 14px;
@@ -40,34 +41,34 @@
   margin-bottom: 60px;
   color: getColor('basic-white');
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet, $type: min) {
     @include fonts($fw: 700, $fs: 48px, $lh: 59px, $ls: 0.06em);  
     max-width: 352px;
-    margin-bottom: 32px;
+    margin-bottom: 0;
+    margin-top: 0;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq (desktop, $type: min) {
     @include fonts($fw: 700, $fs: 58px, $lh: 71px, $ls: 0.06em);
     max-width: 504px;
-    margin-bottom: 60px;
+    margin-bottom: 0;
   }
 }
 
 .footer__call-text {
   @include fonts($fw: 700, $fs: 12px, $lh: 22px, $ls: 0.02em);  
   color: getColor('sec-black');
-  margin-bottom: 40px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
+  
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet, $type: min) {
     font-size: 14px;
-    margin-bottom: 60px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq (desktop, $type: min) {
     font-size: 16px;
-    margin-bottom: 60px;
+    margin-bottom: 0;
   }
 }
 
@@ -76,11 +77,11 @@
   margin-left: 3px;
   color: getColor('basic-white');
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet, $type: min) {
     font-size: 14px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq (desktop, $type: min) {
     font-size: 16px;
   }
 }
@@ -96,16 +97,13 @@
   padding-top: 20px;
   padding-bottom: 20px;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet, $type: min) {
     line-height: calc(26 / 14);
     padding-top: 12px;
     padding-bottom: 12px;
-    & br {
-      display: none;
-    }
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq (desktop, $type: min) {
     font-size: 12px;
   }
 }
@@ -116,12 +114,12 @@
   gap: 20px;
   margin-bottom: 20px;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet, $type: min) {
     margin-bottom: 34px;
     gap: 30px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq (desktop, $type: min) {
     margin-bottom: 40px;
   }
 }
@@ -132,14 +130,6 @@
   border-radius: 50%;
   width: 34px;
   height: 34px;
-
-  &:hover {
-    transform: scale(calc(32/34));
-  }
-  &:focus {
-    transform: scale(calc(35/34));
-  }
-
 }
 
 .socials__link {
@@ -158,25 +148,44 @@
   }
 }
 
-@media screen and (min-width: 768px){
+.footer__contacts {
+    padding-bottom: 40px;
+  }
+
+  .footer__copyright-first-part,
+  .footer__copyright-second-part {
+    display: block;
+  }
+
+
+@include mq(tablet, $type: min) {
   
   .footer__slogan {
     flex: 50%;
+    padding-bottom: 32px;
   }
 
   .footer__contacts {
     flex: 50%;
     padding-top: 60px;
   }
+
+  .footer__copyright-first-part,
+  .footer__copyright-second-part {
+    display: inline;
+  }
 }
 
-@media screen and (min-width: 1200px){
+@include mq (desktop, $type: min) {
   
   .footer__slogan {
     flex: 50%;
+    padding-bottom: 60px;
   }
   .footer__contacts {
     flex: 50%;
     padding-top: 18px;
+    padding-bottom: 60px;
   } 
 }
+

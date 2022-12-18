@@ -234,7 +234,7 @@ $breakpoints: (
 
 
 // transitions mixin
-// миксин для правного перехода
+// миксин для плавного перехода
 
 @mixin transitions($properties...) {
   transition-property: $properties;
