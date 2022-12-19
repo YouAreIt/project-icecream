@@ -1,5 +1,4 @@
 .location-modal {
-  /* Скрываем окна  */
   @include position(center);
   visibility: hidden;
   opacity: 0;
@@ -13,19 +12,14 @@
     pointer-events: initial;
   }
 
-  /*  Установаем ширину окна  */
   width: 568px;
   height: 458px;
 
-  /*  Центрируем и задаем z-index */
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 30;
-  /* Должен быть выше чем у подложки*/
 
-  /*  Побочные стили   */
   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
   padding: 30px;
@@ -35,26 +29,6 @@
 
   border: 2px solid getColor('basic-yellow');
   border-radius: 10px;
-}
-
-/* Стили для активных классов подложки и окна */
-
-.location-modal.active,
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Стили для кнопки закрытия */
-
-.location-modal__icon {
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  fill: getColor('sec-black');
-  cursor: pointer;
 }
 
 .location-modal__title {
