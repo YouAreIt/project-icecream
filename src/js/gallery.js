@@ -8,6 +8,7 @@ const swiper = new Swiper('.gallery__swiper', {
   mousewheel: true,
   keyboard: true,
   effect: 'creative',
+  centeredSlidesBounds: true,
   loop: true,
   speed: 800,
   autoplay: {
