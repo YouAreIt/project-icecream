@@ -1,1 +1,57 @@
-
+<div class="buy-now-modal js-modal" data-modal="buy-now-modal">
+  <button class="buy-now-modal__btn" type="button" data-modal-close>
+    <svg class="buy-now-modal__close-icon">
+      <use href="./images/sprite.svg#modal-close-icon"></use>
+    </svg>
+  </button>
+  <h2 class="buy-now-modal__title">Buy now</h2>
+  <ul class="buy-now-modal__list">
+    <li class="buy-now-modal__item">
+      <p class="buy-now-modal__product">ice cream</p>
+    </li>
+    <li class="buy-now-modal__item">
+      <p class="buy-now-modal__product">ice coffee</p>
+    </li>
+    <li class="buy-now-modal__item">
+      <p class="buy-now-modal__product">ice coffee</p>
+    </li>
+  </ul>
+  <form class="modal-form" name="modal-form">
+    <label for="name" class="modal-form__field">
+      <input
+        class="modal-form__name"
+        type="text"
+        name="name"
+        id="name"
+        pattern="[A-Za-z]{1-30}"
+        autofocus
+        required
+        minlength="2"
+        maxlength="28"
+        placeholder="Name"
+      />
+    </label>
+    <label for="phone-number" class="modal-form__field">
+      <input
+        class="modal-form__phone"
+        type="tel"
+        name="phone-number"
+        id="phone-number"
+        pattern="[0-9]{5,11}"
+        required
+        minlength="9"
+        maxlength="14"
+        placeholder="Phone"
+    /></label>
+    <label for="comments" class="modal-form__field">
+      <textarea
+        class="modal-form__comments"
+        name="comments"
+        id="comments"
+        rows="15"
+        placeholder="Comment"
+      ></textarea>
+    </label>
+    <button class="modal-form__button" type="submit">Submit</button>
+  </form>
+</div>
