@@ -1,7 +1,14 @@
 <header class="header" id="home">
   <div class="header__container">
     <a class="logo" href="#home">
-      <img class="logo__img" src="images/header/logo.png" alt="Logo" />
+      <img
+        class="logo__img"
+        src="images/header/logo-icon@1x.png"
+        alt="Logo"
+        srcset="images/header/logo-icon@1x.png, images/header/logo-icon@2x.png"
+        sizes="(min-width: 1200px) 60px, (min-width: 768px) 48px, (min-width: 480px) 40px, 100vw"
+        loading="lazy"
+      />
     </a>
 
     <nav class="nav">
@@ -28,14 +35,14 @@
       aria-controls="mobile-menu"
     >
       <svg class="burger-menu__icon">
-        <use class="icon__burger" href="./images/sprite.svg#burger_icon"></use>
+        <use class="icon__burger" href="images/sprite.svg#burger-icon"></use>
       </svg>
     </button>
 
     <button class="buy__button" type="button">
       Buy now
       <svg class="buy__button-icon">
-        <use href="./images/sprite.svg#icon-vector"></use>
+        <use href="images/sprite.svg#icon-vector"></use>
       </svg>
     </button>
   </div>
