@@ -6,14 +6,18 @@
 
   transition: 300ms;
 
+  @include mq(tablet) {
+    padding: 32px 60px;
+    width: 568px;
+  }
+
   &.active {
     visibility: visible;
     opacity: 1;
     pointer-events: initial;
   }
 
-  width: 568px;
-  height: 458px;
+  width: 280px;
 
   position: fixed;
   top: 50%;
@@ -22,55 +26,80 @@
 
   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
-  padding: 30px;
+  padding: 25px;
   border-radius: 3px;
   background-color: getColor('sec-white');
   transition: 0.3s all;
 
   border: 2px solid getColor('basic-yellow');
   border-radius: 10px;
+
+    @include mq(tablet) {
+      padding: 32px;
+      width: 568px;
+    }
 }
 
 .location-modal__title {
-  font-family: 'Seymour One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
+  font-family: 'Seymour One', sans-serif;
+  @include fonts($fw: 400, $fs: 16px, $lh: 24px);
   display: block;
   text-align: center;
-  color: var(--black);
-  margin-bottom: 30px;
+  color: getColor('sec-black');
+  margin-bottom: 25px;
+  @include mq(tablet) {
+    @include fonts($fw: 400, $fs: 20px, $lh: 28px);
+  
+    margin-bottom: 32px;
+  }
 }
 
 .location-modal__form {
   display: flex;
   flex-direction: column;
-  gap: 30px;
 }
 
 .location-modal__map {
   border-radius: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+  width: 224px;
+  height: 199px;
+  @include mq(tablet) {
+      width: 448px;
+      height: 260px;
+      margin-bottom: 32px;
+    }
 }
 
 .location-modal__btn-map {
+  font-family: 'Montserrat';
+  @include fonts($fs: 12px, $lh: 15px);
+  font-style: normal;
+  font-weight: 600;
+
+    @include mq(tablet) {
+      @include fonts($fs: 14px, $lh: 17px);
+    
+      margin-bottom: 32px;
+    }
+
   background: getColor('basic-yellow');
   border-radius: 10px;
   padding: 12px 34px;
   font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
+  @include fonts($fw: 600, $fs: 12px, $lh: 15px);
   color: getColor('sec-black');
   border: 0;
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 500ms ease;
+
+  @include mq(tablet) {
+      @include fonts($fw: 600, $fs: 14px, $lh: 17px);
+  
+    }
 
   &:hover,
   &:focus {
-    background: 0;
-    border: 2px solid getColor('basic-yellow');
+    background: rgba(0, 0, 0, 0);
+    box-shadow: inset 0 0 0 2px getColor('basic-yellow');
   }
 }
