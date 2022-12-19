@@ -1,5 +1,6 @@
 .about {
   @include section-indent;
+  background-color: getColor('sec-green');
 }
 .about__container {
   @include container;
@@ -124,6 +125,9 @@
   &:hover,
   &:focus {
     background-color: getColor('ellipse-green');
+  }
+  &:focus {
+    color: getColor('basic-white');
   }
 }
 
