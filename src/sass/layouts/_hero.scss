@@ -132,34 +132,40 @@
 }
 
 .hero_wrap {
-  width: 247px;
+  width: 222px;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 39px;
   }
 
   @media screen and (min-width: 1200px) {
-    width: 280px;
+    width: 286px;
     margin-bottom: 109px;
   }
 }
 
 .hero__btn {
   @include buttons(108px, 12px, transparent);
-  margin-right: 12px;
+  margin-right: 8px;
+
+  @include transitions (border-color, color);
 
   @media screen and (min-width: 1200px) {
     @include buttons(134px, 14px, transparent);
-    margin-right: 34px;
+    margin-right: 30px;
   }
 }
 
 .hero__link {
+  display: inline-block;
   color: getColor('basic-yellow');
   font-size: 12px;
   line-height: 1.26;
   text-decoration: underline;
   vertical-align: baseline;
+  padding: 12px 4px;
+
+  @include transitions (color);
 
   &:hover {
     color: getColor('ellipse-green');
