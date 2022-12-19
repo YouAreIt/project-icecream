@@ -1,1 +1,90 @@
+// .location-modal {
+//   /* Скрываем окна  */
 
+//   /*  Установаем ширину окна  */
+//   width: 568px;
+//   height: 458px;
+
+//   /*  Центрируем и задаем z-index */
+//   position: fixed;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   z-index: 30;
+//   /* Должен быть выше чем у подложки*/
+
+//   /*  Побочные стили   */
+//   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+//   text-align: center;
+//   padding: 30px;
+//   border-radius: 3px;
+//   background-color: getColor('sec-white');
+//   transition: 0.3s all;
+
+//   border: 2px solid getColor('basic-yellow');
+//   border-radius: 10px;
+// }
+
+// /* Стили для активных классов подложки и окна */
+
+// .location-modal.active,
+// .overlay.active {
+//   opacity: 1;
+//   visibility: visible;
+// }
+
+// /* Стили для кнопки закрытия */
+
+// .location-modal__icon {
+//   width: 15px;
+//   height: 15px;
+//   position: absolute;
+//   top: 20px;
+//   right: 20px;
+//   fill: getColor('sec-black');
+//   cursor: pointer;
+// }
+
+// .location-modal__title {
+//   font-family: 'Seymour One';
+//   font-style: normal;
+//   font-weight: 400;
+//   font-size: 20px;
+//   line-height: 28px;
+//   display: block;
+//   text-align: center;
+//   color: var(--black);
+//   margin-bottom: 30px;
+// }
+
+// .location-modal__form {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 30px;
+// }
+
+// .location-modal__map {
+//   border-radius: 10px;
+//   margin-bottom: 30px;
+// }
+
+// .location-modal__btn-map {
+//   background: getColor('basic-yellow');
+//   border-radius: 10px;
+//   padding: 12px 34px;
+//   font-family: 'Montserrat';
+//   font-style: normal;
+//   font-weight: 600;
+//   font-size: 14px;
+//   line-height: 17px;
+//   color: getColor('sec-black');
+//   border: 0;
+//   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+//     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+//   &:hover,
+//   &:focus {
+//     background: 0;
+//     border: 2px solid getColor('basic-yellow');
+//   }
+// }

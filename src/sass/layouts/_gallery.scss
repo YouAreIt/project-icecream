@@ -1,0 +1,11 @@
+.gallery {
+  @include section-indent;
+  background-image: linear-gradient(
+    getColor('sec-green') 200px,
+    transparent 200px
+  );
+}
+
+.gallery__container {
+  @include container;
+}
