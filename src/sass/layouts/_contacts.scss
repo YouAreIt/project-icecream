@@ -1,0 +1,324 @@
+.contacts {
+    @include section-indent;
+    padding-top: 40px;
+  background-color: getColor('sec-green');
+//   position: relative;
+
+@include mq(tablet) {
+      padding-top: 80px;
+      padding-bottom: 40px;
+    }
+
+    @include mq(desktop) {
+      padding-top: 100px;
+      padding-bottom: 120px;
+    }
+}
+.container {
+    @include container;
+}
+
+.contacts__title {
+    color: getColor('sec-black');
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.contacts__card-set {
+    // position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    @include mq(tablet, $type: min) {
+      flex-direction: row;
+    }
+
+}
+.contacts__card-list {
+    position: relative;
+    max-width: 280px;
+    width: 100%;
+    padding: 40px 32px 24px 32px;
+    background-color: getColor('basic-white');
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    transition: transform 300ms ease-in-out;
+
+    @include mq(tablet) {
+      flex-direction: row;
+      max-width: 224px;
+      width: 100%;
+      padding: 40px 24px;
+    }
+
+    @include mq(desktop) {
+      max-width: 368px;
+      width: 100%;
+      padding: 40px;
+
+}
+}   
+
+.contacts__work-place {
+    @include fonts($fw: 500, $fs: 12px, $lh: 14px, $ls: 0.04em);
+    color: getColor('sec-black');
+    min-width: 80px;
+    height: 22px;
+    padding: 4px 22px;
+    border-radius: 4px;
+    background-color: getColor('basic-yellow');
+
+    @include mq(tablet) {
+      @include fonts($fw: 500, $fs: 16px, $lh: 22px, $ls: 0.04em);
+      padding: 4px 13px;
+    }
+
+    @include mq(desktop) {
+      padding: 4px 14px;
+    }
+}
+
+.contacts__town {
+    @include fonts($fw: 500, $fs: 12px, $lh: 22px, $ls: 0.04em);
+    color: getColor('sec-black');
+    margin-top: 20px;
+    margin-bottom: 8px;
+
+    @include mq(tablet) {
+      @include fonts($fw: 500, $fs: 14px, $lh: 26px, $ls: 0.04em);
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    @include mq(desktop) {
+      @include fonts($fw: 500, $fs: 16px, $lh: 30px, $ls: 0.04em);
+      margin-top: 36px;
+      margin-bottom: 8px;
+    }
+}
+
+.location__chicago {
+    margin-right: 26px;
+
+    @include mq(tablet) {
+      margin-right: 3px;
+    }
+
+     @include mq(desktop) {
+      margin-right: 26px;
+    }
+}
+
+.location__los-angeles {
+    margin-right: 4px;
+
+    @include mq(tablet) {
+      margin-right: 20px;
+    }
+}
+
+.location__new-york {
+    margin-right: 26px;
+
+    @include mq(tablet) {
+      margin-right: 18px;
+    }
+}
+
+.contacts__location {
+    @include fonts($fw: 500, $fs: 12px, $lh: 22px, $ls: 0.04em);
+    color: getColor('basic-brown');
+    
+
+    @include mq(tablet) {
+      @include fonts($fw: 500, $fs: 14px, $lh: 26px, $ls: 0.04em);
+    }
+
+    @include mq(desktop) {
+      @include fonts($fw: 500, $fs: 16px, $lh: 29px, $ls: 0.04em);
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+            cursor: pointer;
+            
+        }
+    }
+}
+
+.contacts__schedule {
+    border: 1px solid getColor('dirty-white');
+    border-left: none;
+    border-right: none;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+
+    @include mq(tablet) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    margin-top: 32px;
+    }
+}
+.contacts__days {
+    @include fonts($fw: 500, $fs: 12px, $lh: 22px);
+    color: getColor('sec-black');
+
+    @include mq(tablet) {
+        @include fonts($fw: 500, $fs: 14px, $lh: 26px);
+    }
+
+     @include mq(desktop) {
+        @include fonts($fw: 500, $fs: 16px, $lh: 30px,$ls: 0.04em);
+    }
+
+    
+}
+.contacts__hours {
+    @include fonts($fw: 500, $fs: 12px, $lh: 22px);
+    color: getColor('basic-grey');
+
+    @include mq(tablet) {
+        @include fonts($fw: 500, $fs: 14px, $lh: 26px);
+    }
+
+    @include mq(desktop) {
+        @include fonts($fw: 500, $fs: 16px, $lh: 30px);
+    }
+}
+
+.contacts__schedule-first{
+    margin-bottom: 8px;
+
+    @include mq(desktop) {
+        margin-bottom: 12px;
+    }
+}
+
+.contacts__navigation {
+    @include fonts($fw: 500, $fs: 12px, $lh: 19px);
+    color: getColor('sec-black');
+
+    @include mq(tablet) {
+        @include fonts($fw: 500, $fs: 14px, $lh: 21px);
+    }
+    
+}
+.contacts__navigation-tel {
+    @include fonts($fw: 500, $fs: 12px, $lh: 19px);
+    color: getColor('sec-black');
+    margin-bottom: 6px;
+
+    @include mq(tablet) {
+        @include fonts($fw: 500, $fs: 14px, $lh: 21px);
+        margin-bottom: 4px;
+    }
+
+    @include mq(desktop) {
+        @include fonts($fw: 500, $fs: 16px, $lh: 24px);
+    }
+}
+.contacts__navigation-mail {
+    @include fonts($fw: 500, $fs: 12px, $lh: 19px);
+    color: getColor('sec-black');
+
+    @include mq(tablet) {
+        @include fonts($fw: 500, $fs: 14px, $lh: 21px);
+    }
+
+    @include mq(desktop) {
+        @include fonts($fw: 500, $fs: 16px, $lh: 24px);
+    }
+}
+
+.contacts__btn-container {
+
+    @include mq(tablet) {
+        display: flex;
+        margin-top: 40px;
+    }
+
+    @include mq(desktop) {
+        margin-top: 60px;
+    }
+
+}
+
+.contacts__btn-locations {
+  width: 196px;
+  height: 42px;
+  @include fonts($fw: 600, $fs: 14px, $lh: 18px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: getColor('basic-yellow');
+  margin: 0 auto;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 16px;
+
+    @include mq(tablet) {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: 8px;
+    }
+
+
+  @include mq(desktop) {
+
+  &:hover,
+  &:focus {
+
+    background-color: getColor('ellipse-green');
+  }
+}
+}
+.contacts__btn-icon {
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
+}
+.contacts__btn-franchise {
+  width: 196px;
+  height: 42px;
+  @include fonts($fw: 600, $fs: 14px, $lh: 18px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: transparent;
+  border: 2px solid getColor('basic-yellow');
+  cursor: pointer;
+  border-radius: 10px;
+
+   @include mq(tablet) {
+      margin-left: 8px;
+      margin-right: auto;
+    }
+  @media screen and (min-width: 1200px) {
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid getColor('ellipse-green');
+  }
+}
