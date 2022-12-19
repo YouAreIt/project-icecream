@@ -1,1 +1,121 @@
+<div class="buy-now-modal js-modal" data-modal="buy-now-modal">
+  <button class="buy-now-modal__btn" type="button" data-modal-close>
+    <svg class="buy-now-modal__close-icon">
+      <use href="./images/sprite.svg#modal-close-icon"></use>
+    </svg>
+  </button>
+  <h2>
+    <span class="products-modal__title-first-part">Chololate</span
+    ><span class="products-modal__title-second-part"> icecream</span>
+  </h2>
+  <div class="products-modal__img-circle-container">
+    <div class="products-modal__img-shadow">
+      <picture>
+        <source
+          srcset="
+            images/products/modal-ice-cream-1200@1x.jpg 1x,
+            images/products/modal-ice-cream-1200@2x.jpg 2x
+          "
+          media="(min-width: 1200px, min-width: 768px)"
+          type="image/jpg"
+        />
+        <source
+          srcset="
+            ./images/products/modal-ice-cream-320@1x.jpg 1x,
+            ./images/products/modal-ice-cream-320@2x.jpg 2x
+          "
+          type="image/jpg"
+        />
+        <img
+          class="products-modal__img img"
+          src="./images/products/modal-ice-cream-320@1x.jpg"
+          alt="ice-cream"
+        />
+      </picture>
+      <div class="products-modal__circle-under-img"></div>
+    </div>
+  </div>
+  <div class="products-modal__value-container">
+    <div class="products-modal__oval">
+      <div class="products-modal__amounts">320</div>
+      <div class="products-modal__facts">kcal</div>
+    </div>
+    <div class="products-modal__oval">
+      <div class="products-modal__amounts">4g</div>
+      <div class="products-modal__facts prote-hidden">Prote...</div>
+      <div class="products-modal__facts protein-hidden">Protein...</div>
+    </div>
+    <div class="products-modal__oval">
+      <div class="products-modal__amounts">8,2g</div>
+      <div class="products-modal__facts">Fats</div>
+    </div>
+    <div class="products-modal__oval">
+      <div class="products-modal__amounts">40,4g</div>
+      <div class="products-modal__facts">Carbs</div>
+    </div>
+  </div>
 
+  <h3 class="products-modal__subtitle">Ingredients</h3>
+  <ul class="products-modal__list">
+    <li class="products-modal__item">Milk</li>
+    <li class="products-modal__item">100ml</li>
+  </ul>
+  <ul class="products-modal__list">
+    <li class="products-modal__item">Belgian chocolate</li>
+    <li class="products-modal__item">20g</li>
+  </ul>
+  <ul class="products-modal__list">
+    <li class="products-modal__item">Cream</li>
+    <li class="products-modal__item">150 ml</li>
+  </ul>
+  <ul class="products-modal__list">
+    <li class="products-modal__item">Cocoa powder</li>
+    <li class="products-modal__item">30g</li>
+  </ul>
+  <ul class="products-modal__list">
+    <li class="products-modal__item">Sugar</li>
+    <li class="products-modal__item">40g</li>
+  </ul>
+  <ul class="products-modal__list">
+    <li class="products-modal__item">Vanilla sugar</li>
+    <li class="products-modal__item">10g</li>
+  </ul>
+  <form class="contact-form" name="contacts-form">
+    <label for="name" class="contact-form__field">
+      <input
+        class="contact-form__name"
+        type="text"
+        name="name"
+        id="name"
+        pattern="[A-Za-z]{1-30}"
+        autofocus
+        required
+        minlength="2"
+        maxlength="28"
+        placeholder="Name"
+      />
+    </label>
+    <label for="phone_number" class="contact-form__field">
+      <input
+        class="contact-form__phone"
+        type="tel"
+        name="phone_number"
+        id="phone_number"
+        pattern="[0-9]{5,11}"
+        required
+        minlength="9"
+        maxlength="14"
+        placeholder="Phone"
+    /></label>
+    <label for="comments" class="contact-form__field">
+      <textarea
+        class="contact-form__comments"
+        name="comments"
+        id="comments"
+        rows="15"
+        placeholder="Comment"
+      ></textarea>
+    </label>
+    <button class="contact-form__button" type="submit">Submit</button>
+  </form>
+</div>
