@@ -1,5 +1,4 @@
-.products-modal,
-.read-more-modal {
+.products-modal {
   @include position(center);
   visibility: hidden;
   opacity: 0;
@@ -20,7 +19,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 280px;
-  height: 100vh;
+  height: 80vh;
   overflow-y: scroll;
 
   max-height: 968px;
