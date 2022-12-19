@@ -1,1 +1,141 @@
+.buy-now-modal {
+    @include position(center);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 
+  transition: 300ms;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: initial;
+  }
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 280px;
+  height: calc(100vh - 40px);
+  overflow-y: scroll;
+
+  max-height: 991px;
+  padding: 28px;
+  background-color: getColor('basic-white');
+  color: getColor('sec-black');
+  border: 2px solid getColor('basic-yellow');
+  border-radius: 10px;
+  z-index: 50;
+
+  @include mq(tablet) {
+    max-width: 568px;
+    width: 100%;
+    max-height: 996px;
+    padding: 32px 40px;
+    text-align: center;
+  }
+}
+
+.buy-now-modal__btn {
+  @include flex;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+.buy-now-modal__close-icon {
+  fill: getColor('sec-black');
+  width: 11px;
+  height: 11px;
+
+  @include mq(tablet, $type: min) {
+    width: 13px;
+    height: 13px;
+  }
+}
+.buy-now-modal__title {
+    font-family: 'Seymour One';
+  @include fonts($fw: 400, $fs: 16px, $lh: 24px);
+  display: block;
+  text-align: center;
+  color: getColor('sec-black');
+  margin-bottom: 20px;
+
+  @include mq(tablet, $type: min) {
+    display: inline;
+  }
+}
+.buy-now-modal__list {
+    
+}
+
+
+.buy-now-modal__item {
+    @include flex;
+    flex-direction: column;
+    z-index: 101;
+
+
+  @include mq(tablet, $type: min) {
+    margin-top: 24px;
+}}
+
+.buy-now-modal__img-shadow {
+  max-width: 132px;
+  width: 100%;
+  border-radius: 50%;
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    getColor('modal-ingredients-icecream-white');
+  box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+}
+.buy-now-modal__img {
+  border-radius: 50%;
+  background-color: getColor('basic-white');
+
+}
+.img {
+}
+.buy-now-modal__circle-under-img {
+  max-width: 132px;
+  max-height: 132px;
+  border-radius: 50%;
+  margin-top: 7px;
+  background-color: getColor('modal-ingredients-green');
+
+}
+.buy-now-modal__square {
+  width: 132px;
+  height: 136px;
+  border-radius: 0 0 16px 16px;
+  border: 2px solid getColor('modal-ingredients-green');
+  filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+  top: -68px;
+  position: relative;
+  z-index: -1;
+}
+
+.buy-now-modal__product {
+}
+.modal-form {
+}
+.modal-form__field {
+}
+.modal-form__name {
+}
+.modal-form__phone {
+}
+.modal-form__comments {
+}
+.modal-form__button {
+}
