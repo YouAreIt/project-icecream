@@ -3,10 +3,55 @@
     <div class="swiper gallery__swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="./images/gallery/gallery-photo.jpg" alt="" />
+          <picture>
+            <source
+              srcset="
+                ./images/gallery/gallery-pic-1@1x.png 1x,
+                ./images/gallery/gallery-pic-1@1x.png 2x
+              "
+              media="(min-width: 1200px, min-width: 768px)"
+              type="image/png"
+            />
+            <img
+              class="swiper-pic"
+              src="./images/gallery/gallery-pic-1@1x.png"
+              alt="Image of the ice cream variation"
+            />
+          </picture>
         </div>
         <div class="swiper-slide">
-          <img src="./images/gallery/gallery-photo2.jpg" alt="" />
+          <picture>
+            <source
+              srcset="
+                ./images/gallery/gallary-pic-2@1x.png 1x,
+                ./images/gallery/gallary-pic-2@1x.png 2x
+              "
+              media="(min-width: 1200px, min-width: 768px)"
+              type="image/png"
+            />
+            <img
+              class="swiper-pic"
+              src="./images/gallery/gallary-pic-2@1x.png"
+              alt="Image of the ice cream variation"
+            />
+          </picture>
+        </div>
+        <div class="swiper-slide">
+          <picture>
+            <source
+              srcset="
+                ./images/gallery/gallary-pic-3@1x.png 1x,
+                ./images/gallery/gallary-pic-3@1x.png 1x
+              "
+              media="(min-width: 1200px, min-width: 768px)"
+              type="image/png"
+            />
+            <img
+              class="swiper-pic"
+              src="./images/gallery/gallary-pic-3@1x.png"
+              alt="Image of the ice cream variation"
+            />
+          </picture>
         </div>
       </div>
     </div>
