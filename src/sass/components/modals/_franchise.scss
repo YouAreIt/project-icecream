@@ -30,39 +30,6 @@
   }
 }
 
-.franchise-modal__btn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  border: none;
-  cursor: pointer;
-
-  @media screen and (min-width: 768px) {
-    width: 24px;
-    height: 24px;
-  }
-}
-
-.franchise-modal__icon {
-  width: 20px;
-  height: 20px;
-  top: 0;
-  right: 0;
-
-  @media screen and (min-width: 768px) {
-    width: 24px;
-    height: 24px;
-  }
-}
-
 .franchise-modal__container {
   display: flex;
   justify-content: center;
