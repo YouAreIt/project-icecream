@@ -1,5 +1,4 @@
-.products-modal,
-.read-more-modal {
+.products-modal {
   @include position(center);
   visibility: hidden;
   opacity: 0;
@@ -20,7 +19,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 280px;
-  height: 100vh;
+  height: 80vh;
   overflow-y: scroll;
 
   max-height: 968px;
@@ -37,30 +36,6 @@
     max-height: 996px;
     padding: 32px 40px;
     text-align: center;
-  }
-}
-
-.products-modal__btn {
-  @include flex;
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 16px;
-  right: 16px;
-  border-radius: 50%;
-  border-color: transparent;
-  background-color: transparent;
-  padding: 0;
-  cursor: pointer;
-}
-.products-modal__close-icon {
-  fill: getColor('sec-black');
-  width: 11px;
-  height: 11px;
-
-  @include mq(tablet, $type: min) {
-    width: 13px;
-    height: 13px;
   }
 }
 

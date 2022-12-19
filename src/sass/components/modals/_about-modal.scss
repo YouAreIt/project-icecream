@@ -1,13 +1,21 @@
 .about-modal {
   @include position(center);
 
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: initial;
+  }
+
   background-color: getColor('basic-white');
   border: 2px solid getColor('basic-yellow');
   border-radius: 10px;
 
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
+  transition: 300ms;
 
   padding: 28px;
   width: 280px;
@@ -16,21 +24,6 @@
     padding: 32px 60px;
     width: 568px;
   }
-
-  .active {
-    visibility: visible;
-    opacity: 1;
-    pointer-events: initial;
-  }
-}
-
-.about-modal__btn {
-  @include position($top: 12px, $right: 12px);
-
-  padding: 0;
-  margin: 0;
-  background-color: transparent;
-  border: none;
 }
 
 .about-modal__title {
