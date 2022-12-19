@@ -1,18 +1,18 @@
-// .products-modal,
-// .read-more-modal {
-//   @include position(center);
-//   visibility: hidden;
-//   opacity: 0;
-//   pointer-events: none;
+.products-modal,
+.read-more-modal {
+  @include position(center);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 
-//   transition: 300ms;
+  transition: 300ms;
 
-//   &.active {
-//     visibility: visible;
-//     opacity: 1;
-//     pointer-events: initial;
-//   }
-// }
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: initial;
+  }
+}
 
 .products-modal {
   position: absolute;

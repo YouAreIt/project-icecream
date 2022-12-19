@@ -1,5 +1,17 @@
 .location-modal {
   /* Скрываем окна  */
+  @include position(center);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 300ms;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: initial;
+  }
 
   /*  Установаем ширину окна  */
   width: 568px;
