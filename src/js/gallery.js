@@ -9,7 +9,7 @@ const swiper = new Swiper('.gallery__swiper', {
   keyboard: true,
   effect: 'creative',
   loop: true,
-  speed: 800,
+  speed: 600,
   autoplay: {
     duration: 2000,
   },
