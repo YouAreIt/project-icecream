@@ -126,6 +126,9 @@
   &:focus {
     background-color: getColor('ellipse-green');
   }
+  &:focus {
+    color: getColor('basic-white');
+  }
 }
 
 .about__btn-icon {
