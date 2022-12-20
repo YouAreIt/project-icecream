@@ -4,7 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 280px;
-  height: 674px;
+  height: 80vh;
   padding: 28px;
 
   background-color: getColor('basic-white');
@@ -25,7 +25,7 @@
 
   @media screen and (min-width: 768px) {
     width: 568px;
-    height: 668px;
+
     padding: 32px;
   }
 }
