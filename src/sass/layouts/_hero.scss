@@ -8,7 +8,7 @@
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 50px;
+  padding-top: 40px;
 
   @media screen and (max-width: 479px) {
     max-width: 479px;
@@ -26,14 +26,14 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-top: 14px;
+    padding-top: 4px;
     padding-bottom: 5px;
   }
 
   @media screen and (min-width: 1200px) {
     width: 1200px;
     height: 586px;
-    padding-top: 45px;
+    padding-top: 35px;
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -148,7 +148,7 @@
   @include buttons(108px, 12px, transparent);
   margin-right: 8px;
 
-  @include transitions (border-color, color);
+  @include transitions(border-color, color);
 
   @media screen and (min-width: 1200px) {
     @include buttons(134px, 14px, transparent);
@@ -165,7 +165,7 @@
   vertical-align: baseline;
   padding: 12px 4px;
 
-  @include transitions (color);
+  @include transitions(color);
 
   &:hover {
     color: getColor('ellipse-green');
