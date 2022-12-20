@@ -80,7 +80,7 @@
 
     @include mq(tablet) {
     display: flex;
-    gap: 32px;
+    gap: 30px;
     flex-direction: row;
   }
 }
@@ -88,6 +88,7 @@
 .buy-now-modal__item {
     @include flex;
     flex-direction: column;
+    
 
     @include transitions (transform);
 
@@ -101,6 +102,8 @@
 
 
 .buy-now-modal__img-shadow {
+ position: relative;
+ z-index: 200;
   max-width: 132px;
   width: 100%;
   border-radius: 50%;
@@ -141,13 +144,14 @@
   width: 132px;
   height: 136px;
   border-radius: 0 0 16px 16px;
+  padding-top: 95px;
+  padding-left: auto;
+  padding-right: auto;
+  margin-top: -68px;
   background: getColor('modal-ingredients-green');
-
   border: 2px solid getColor('modal-ingredients-green');
   filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
-  top: -80px;
-  position: relative;
-  z-index: -1;
+  
 }
 
 .buy-now-modal__square-cofee-border {
@@ -165,13 +169,12 @@
 
 .buy-now-modal__product {
   @include fonts($fw: 700, $fs: 16px, $lh: 20px, $ls: 0.04em);
-  display: block;
+  display: flex;
   text-align: center;
-  z-index: 300;
-  
+  justify-content: center;
   color: getColor('sec-black');
   text-transform: uppercase;
-  padding-bottom: 20px;
+  text-align: center;
 }
 .modal-form {
   display: block;
@@ -179,7 +182,6 @@
   margin-right: auto;
   max-width: 224px;
   width: 100%;
-  padding: 0 5px;
   margin-top: 30px;
 
   @include mq(tablet) {
