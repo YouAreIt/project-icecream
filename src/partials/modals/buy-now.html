@@ -1,4 +1,4 @@
-<!-- <div class="buy-now-modal js-modal" data-modal="buy-now-modal">
+<div class="buy-now-modal js-modal" data-modal="buy-now-modal">
   <button class="buy-now-modal__btn" type="button" data-modal-close>
     <svg class="buy-now-modal__close-icon">
       <use href="./images/sprite.svg#modal-close-icon"></use>
@@ -7,13 +7,94 @@
   <h2 class="buy-now-modal__title">Buy now</h2>
   <ul class="buy-now-modal__list">
     <li class="buy-now-modal__item">
-      <p class="buy-now-modal__product">ice cream</p>
+      <div class="buy-now-modal__img-shadow">
+        <picture>
+          <source
+            srcset="
+              images/products/ice-cream-1200@1x.png 1x,
+              images/products/ice-cream-1200@2x.png 2x
+            "
+            media="(min-width: 1200px, min-width: 768px)"
+            type="image/png"
+          />
+          <source
+            srcset="
+              ./images/products/ice-cream-320@1x.png 1x,
+              ./images/products/ice-cream-320@2x.png 2x
+            "
+            type="image/png"
+          />
+          <img
+            class="buy-now-modal__img img"
+            src="./images/products/ice-cream-320@1x.png"
+            alt="ice-cream"
+          />
+        </picture>
+        <div class="buy-now-modal__circle-under-img"></div>
+      </div>
+      <div class="buy-now-modal__square">
+        <p class="buy-now-modal__product">ice cream</p>
+      </div>
     </li>
     <li class="buy-now-modal__item">
-      <p class="buy-now-modal__product">ice coffee</p>
+      <div class="buy-now-modal__img-shadow buy-now-modal__cofee-color">
+        <picture>
+          <source
+            srcset="
+              images/products/ice-coffee-1200@1x.png 1x,
+              images/products/ice-coffee-1200@2x.png 2x
+            "
+            media="(min-width: 1200px, min-width: 768px)"
+            type="image/jpg"
+          />
+          <source
+            srcset="
+              ./images/products/ice-coffee-320@1x.png 1x,
+              ./images/products/ice-coffee-320@2x.png 2x
+            "
+            type="image/jpg"
+          />
+          <img
+            class="buy-now-modal__img img"
+            src="./images/products/ice-coffee-320@1x.png"
+            alt="ice-coffee"
+          />
+        </picture>
+        <div class="buy-now-modal__circle-under-img"></div>
+      </div>
+      <div class="buy-now-modal__square buy-now-modal__square-cofee-border">
+        <p class="buy-now-modal__product">ice coffee</p>
+      </div>
     </li>
     <li class="buy-now-modal__item">
-      <p class="buy-now-modal__product">ice coffee</p>
+      <div class="buy-now-modal__img-shadow buy-now-modal__milkshake-color">
+        <picture>
+          <source
+            srcset="
+              images/products/milkshakes-1200@1x.png 1x,
+              images/products/milkshakes-1200@2x.png 2x
+            "
+            media="(min-width: 1200px, min-width: 768px)"
+            type="image/jpg"
+          />
+          <source
+            srcset="
+              ./images/products/milkshakes-320@1x.png 1x,
+              ./images/products/milkshakes-320@2x.png 2x
+            "
+            type="image/png"
+          />
+          <img
+            class="buy-now-modal__img img"
+            src="./images/products/milkshakes-320@1x.png"
+            alt="milkshakes"
+          />
+        </picture>
+        <div class="buy-now-modal__circle-under-img"></div>
+      </div>
+      <div class="buy-now-modal__square buy-now-modal__square-milkshake-border">
+        <p class="buy-now-modal__product">milkshake</p>
+      </div>
     </li>
   </ul>
   <form class="modal-form" name="modal-form">
@@ -54,4 +135,4 @@
     </label>
     <button class="modal-form__button" type="submit">Submit</button>
   </form>
-</div> -->
+</div>

@@ -39,6 +39,31 @@
   }
 }
 
+.products-modal__btn {
+  @include flex;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+.products-modal__close-icon {
+  fill: getColor('sec-black');
+  width: 11px;
+  height: 11px;
+
+  @include mq(tablet, $type: min) {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+
 .products-modal__title-first-part,
 .products-modal__title-second-part {
   font-family: 'Seymour One';
