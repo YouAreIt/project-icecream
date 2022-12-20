@@ -118,6 +118,8 @@
   border: none;
   border-radius: 10px;
 
+  @include transitions(background-color, color);
+
   @media screen and (min-width: 768px) {
     margin-left: initial;
     margin-top: 32px;

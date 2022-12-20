@@ -283,6 +283,8 @@
   margin-top: 20px;
   margin-bottom: 16px;
 
+  @include transitions(background-color, color);
+
   @include mq(tablet) {
     margin-top: 0;
     margin-bottom: 0;
@@ -315,6 +317,8 @@
   border: 2px solid getColor('basic-yellow');
   cursor: pointer;
   border-radius: 10px;
+
+  @include transitions(border, color);
 
   @include mq(tablet) {
     margin-left: 8px;

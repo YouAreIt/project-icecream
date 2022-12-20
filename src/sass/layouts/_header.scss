@@ -44,6 +44,7 @@
       $lh: 20px,
       $cl: getColor('basic-white')
     );
+    @include transitions(color);
   }
 
   &:hover,
@@ -61,6 +62,8 @@
   background-color: getColor('basic-yellow');
   border-radius: 10px;
   border: none;
+
+  @include transitions(background-color, color);
 
   &:hover,
   &:focus {

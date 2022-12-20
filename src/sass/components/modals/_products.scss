@@ -253,12 +253,12 @@
   height: 42px;
   border: none;
   border-radius: 10px;
+  @include transitions(background, box-shadow);
 
+  &:hover,
   &:focus {
-    background-color: getColor('card-yellow');
-  }
-  &:hover {
-    background-color: getColor('card-yellow');
+    background: rgba(0, 0, 0, 0);
+    box-shadow: inset 0 0 0 2px getColor('basic-yellow');
   }
 
   @include mq(tablet, $type: min) {

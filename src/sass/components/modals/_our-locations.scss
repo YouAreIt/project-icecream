@@ -34,10 +34,10 @@
   border: 2px solid getColor('basic-yellow');
   border-radius: 10px;
 
-    @include mq(tablet) {
-      padding: 32px;
-      width: 568px;
-    }
+  @include mq(tablet) {
+    padding: 32px;
+    width: 568px;
+  }
 }
 
 .location-modal__title {
@@ -49,7 +49,7 @@
   margin-bottom: 25px;
   @include mq(tablet) {
     @include fonts($fw: 400, $fs: 20px, $lh: 28px);
-  
+
     margin-bottom: 32px;
   }
 }
@@ -65,10 +65,10 @@
   width: 224px;
   height: 199px;
   @include mq(tablet) {
-      width: 448px;
-      height: 260px;
-      margin-bottom: 32px;
-    }
+    width: 448px;
+    height: 260px;
+    margin-bottom: 32px;
+  }
 }
 
 .location-modal__btn-map {
@@ -77,11 +77,11 @@
   font-style: normal;
   font-weight: 600;
 
-    @include mq(tablet) {
-      @include fonts($fs: 14px, $lh: 17px);
-    
-      margin-bottom: 32px;
-    }
+  @include mq(tablet) {
+    @include fonts($fs: 14px, $lh: 17px);
+
+    margin-bottom: 32px;
+  }
 
   background: getColor('basic-yellow');
   border-radius: 10px;
@@ -90,12 +90,11 @@
   @include fonts($fw: 600, $fs: 12px, $lh: 15px);
   color: getColor('sec-black');
   border: 0;
-  transition: all 500ms ease;
+  @include transitions(background, box-shadow);
 
   @include mq(tablet) {
-      @include fonts($fw: 600, $fs: 14px, $lh: 17px);
-  
-    }
+    @include fonts($fw: 600, $fs: 14px, $lh: 17px);
+  }
 
   &:hover,
   &:focus {
