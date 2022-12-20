@@ -1,7 +1,7 @@
 .header {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 100;
   background-color: getColor('sec-green');
   box-shadow: 0px 10px 10px rgba(132, 161, 120, 0.5);
 }
@@ -88,7 +88,7 @@
     }
   }
 
-  .mob-menu > & {
+  .mob-menu {
     margin-left: auto;
     margin-right: auto;
 
@@ -102,6 +102,10 @@
     width: 6px;
     height: 10px;
   }
+}
+
+.buy__button-mob {
+  margin: 0 auto;
 }
 
 .burger-menu {
