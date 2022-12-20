@@ -31,8 +31,8 @@
   @include mq(tablet) {
     max-width: 568px;
     width: 100%;
-    max-height: 996px;
-    padding: 32px 40px;
+    max-height: 644px;
+    padding: 32px 54px;
     text-align: center;
   }
 }
@@ -49,13 +49,14 @@
   background-color: transparent;
   padding: 0;
   cursor: pointer;
+  
 }
 .buy-now-modal__close-icon {
   fill: getColor('sec-black');
   width: 11px;
   height: 11px;
 
-  @include mq(tablet, $type: min) {
+  @include mq(tablet) {
     width: 13px;
     height: 13px;
   }
@@ -68,24 +69,36 @@
   color: getColor('sec-black');
   margin-bottom: 20px;
 
-  @include mq(tablet, $type: min) {
-    display: inline;
+  @include mq(tablet) {
+    @include fonts($fw: 400, $fs: 20px, $lh: 28px);
   }
 }
 .buy-now-modal__list {
-    
-}
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
 
+    @include mq(tablet) {
+    display: flex;
+    gap: 32px;
+    flex-direction: row;
+  }
+}
 
 .buy-now-modal__item {
     @include flex;
     flex-direction: column;
-    z-index: 101;
 
+    @include transitions (transform);
 
-  @include mq(tablet, $type: min) {
-    margin-top: 24px;
-}}
+        &:hover {
+    transform: scale(1.07);
+  }
+        &:focus {
+    transform: scale(1.07);
+  }
+}
+
 
 .buy-now-modal__img-shadow {
   max-width: 132px;
@@ -99,13 +112,23 @@
     getColor('modal-ingredients-icecream-white');
   box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
 }
+
+.buy-now-modal__cofee-color {
+    background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
+    box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+}
+
+.buy-now-modal__milkshake-color {
+    background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
+    box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+}
+
 .buy-now-modal__img {
   border-radius: 50%;
   background-color: getColor('basic-white');
 
 }
-.img {
-}
+
 .buy-now-modal__circle-under-img {
   max-width: 132px;
   max-height: 132px;
@@ -118,24 +141,126 @@
   width: 132px;
   height: 136px;
   border-radius: 0 0 16px 16px;
+  background: getColor('modal-ingredients-green');
+
   border: 2px solid getColor('modal-ingredients-green');
   filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
-  top: -68px;
+  top: -80px;
   position: relative;
   z-index: -1;
 }
 
+.buy-now-modal__square-cofee-border {
+    background: getColor('card-yellow');
+    border: 2px solid getColor('card-yellow');
+    box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+    
+}
+
+.buy-now-modal__square-milkshake-border {
+    background: getColor('basic-brown');
+    border: 2px solid getColor('basic-brown');
+    filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+}
+
 .buy-now-modal__product {
+  @include fonts($fw: 700, $fs: 16px, $lh: 20px, $ls: 0.04em);
+  display: block;
+  text-align: center;
+  z-index: 300;
+  
+  color: getColor('sec-black');
+  text-transform: uppercase;
+  padding-bottom: 20px;
 }
 .modal-form {
-}
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 224px;
+  width: 100%;
+  padding: 0 5px;
+  margin-top: 30px;
+
+  @include mq(tablet) {
+    max-width: 368px;
+    margin-top: 40px;
+}}
 .modal-form__field {
+    margin-bottom: 16px;
 }
-.modal-form__name {
-}
-.modal-form__phone {
-}
+.modal-form__name,
+.modal-form__phone,
 .modal-form__comments {
+  display: block;
+  width: 100%;
+  height: 32px;
+  padding: 8px 12px;
+  border: 1px solid getColor('sec-green');
+  background-color: rgba(248, 210, 78, 0.1);
+  border-radius: 10px;
+  margin-bottom: 12px;
+
+  @include mq(tablet) {
+    height: 42px;
 }
+}
+
+.modal-form__comments {
+  height: 65px;
+  margin-bottom: 0;
+  resize: none; 
+
+  @include mq(tablet) {
+    height: 84px;
+    margin-bottom: 32px;
+}
+}
+
+.modal-form__name,
+.modal-form__phone,
+.modal-form__comments {
+    &::placeholder {
+    @include fonts($fw: 400, $fs: 12px, $lh: 17px);
+    color: getColor('sec-black');
+  }
+
+  &:focus,
+  &:focus,
+  &:focus {
+    outline: none;
+    border-color: getColor('ellipse-green');
+    font-weight: 500;
+  }
+
+   @include mq(tablet) {
+    @include fonts($fw: 400, $fs: 14px, $lh: 20px);
+}
+
+}
+
 .modal-form__button {
+  @include fonts($fw: 600, $fs: 14px, $lh: 17px);
+  @include transitions(background-color);
+  @include flex;
+  color: getColor('sec-black');
+  background-color: getColor('basic-yellow');
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  min-width: 114px;
+  height: 42px;
+  border: none;
+  border-radius: 10px;
+
+  &:focus {
+    background-color: getColor('card-yellow');
+  }
+  &:hover {
+    background-color: getColor('card-yellow');
+  }
+
+  @include mq(tablet) {
+    min-width: 121px;
+  }
 }
