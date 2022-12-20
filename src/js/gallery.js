@@ -10,17 +10,18 @@ const swiper = new Swiper('.gallery__swiper', {
   effect: 'creative',
   centeredSlidesBounds: true,
   loop: true,
-  speed: 800,
+  speed: 2000,
   autoplay: {
     duration: 2000,
   },
+  grabCursor: true,
 
   creativeEffect: {
     prev: {
-      translate: ['-120%', 0, -450],
+      translate: ['-130%', 0, -450],
     },
     next: {
-      translate: ['120%', 0, -450],
+      translate: ['130%', 0, -450],
     },
   },
 });

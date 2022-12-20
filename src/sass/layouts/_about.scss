@@ -1,5 +1,9 @@
 .about {
   @include section-indent;
+  @media screen and(max-width: 767.98px) {
+    padding-bottom: 50px;
+  }
+
   background-color: getColor('sec-green');
 }
 .about__container {
