@@ -243,19 +243,12 @@
 
   padding: 12px 14px;
 
-  @include transitions(color, box-shadow, background-color);
+  @include transitions(background, box-shadow);
 
-  &:hover {
-    background-color: getColor('sec-green');
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border: getColor('ellipse-green');
-    border-radius: 10px;
-    border-color: getColor('ellipse-green');
-    color: getColor('sec-black');
-  }
-
+  &:hover,
   &:focus {
-    background-color: getColor('ellipse-green');
+    background: rgba(0, 0, 0, 0);
+    box-shadow: inset 0 0 0 2px getColor('basic-yellow');
   }
 
   @media screen and (min-width: 768px) {
