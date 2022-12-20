@@ -41,26 +41,37 @@
   }
 }
 
-.about-modal__video {
+.about-modal__contenteiner {
   border-radius: 10px;
-
-  width: 224px;
-  height: 198px;
   margin-bottom: 20px;
 
   @include mq(tablet) {
-    width: 448px;
-    height: 205px;
     margin-bottom: 32px;
+  }
+}
+
+.about-modal__video-tab {
+  @media screen and (max-width: 767px) {
+    display: none;
+    
+  }
+}
+
+.about-modal__video-mob {
+  @media screen and (min-width: 768px) {
+    display: none;
+  
   }
 }
 
 .about-modal__text {
   @include fonts($fs: 14px, $lh: 20px);
+  margin-top: 20px;
 
   color: getColor('sec-black');
 
   @include mq(tablet) {
     @include fonts($fs: 16px, $lh: 22px);
+    margin-top: 32px;
   }
 }

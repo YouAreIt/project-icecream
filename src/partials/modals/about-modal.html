@@ -8,14 +8,31 @@
       <use href="./images/sprite.svg#modal-close-icon"></use>
     </svg>
   </button>
-  <div class="about-modal__content">
+  <div class="about-modal__contenteiner">
     <h2 class="about-modal__title">How it’s made?</h2>
-    <video
-      class="about-modal__video"
-      src="https://www.youtube.com/watch?v=nvU6H8SiKJc"
-      controls
-      preload="auto"
-    ></video>
+    <div class="about-modal__video-container">
+      <iframe
+        class="about-modal__video-mob"
+        width="224"
+        height="198"
+        src="https://www.youtube.com/embed/fvnPlxVhAXQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <iframe
+        class="about-modal__video-tab"
+        width="448"
+        height="205"
+        src="https://www.youtube.com/embed/fvnPlxVhAXQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+
     <p class="about-modal__text">
       For the preparation of milkshakes, the constituent components are mixed in
       a mixer vessel. Milk is introduced first, then syrups. Whipping cocktails
