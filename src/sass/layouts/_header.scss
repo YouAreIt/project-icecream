@@ -1,14 +1,20 @@
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   background-color: getColor('sec-green');
+  box-shadow: 0px 10px 10px rgba(132, 161, 120, 0.5);
 }
 
 .header__container {
   @include flex;
   @include container;
   padding-top: 12px;
+  padding-bottom: 10px;
 
   @include mq(tablet) {
     padding-top: 20px;
+    padding-bottom: 10px;
   }
 
   @include mq(desktop) {
