@@ -1,5 +1,4 @@
 .advantages {
-  @include section-indent;
   background-color: getColor('sec-green');
 }
 .advantages__container {
@@ -250,7 +249,7 @@
 
   color: getColor('basic-white');
 
-  margin-bottom: 94px;
+  // margin-bottom: 94px;
 
   @media screen and (min-width: 768px) {
     font-weight: 400;

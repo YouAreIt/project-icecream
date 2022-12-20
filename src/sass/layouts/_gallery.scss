@@ -1,9 +1,29 @@
 .gallery {
-  @include section-indent;
+  padding-bottom: 80px;
+  @include mq(tablet) {
+    @include section-indent(60, 140);
+  }
+  @include mq(desktop) {
+    @include section-indent(80);
+  }
   background-image: linear-gradient(
-    getColor('sec-green') 200px,
-    transparent 200px
+    getColor('sec-green') 32px,
+    transparent 32px
   );
+
+  @include mq(tablet) {
+    background-image: linear-gradient(
+      getColor('sec-green') 200px,
+      transparent 200px
+    );
+  }
+
+  @include mq(tablet) {
+    background-image: linear-gradient(
+      getColor('sec-green') 180px,
+      transparent 180px
+    );
+  }
 }
 
 .gallery__container {

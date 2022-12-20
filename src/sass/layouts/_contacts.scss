@@ -1,11 +1,25 @@
 .contacts {
-  @include section-indent;
-  padding-top: 40px;
+  @include section-indent(40);
   background-image: linear-gradient(
-    transparent 200px,
-    getColor('sec-green') 200px
+    transparent 394px,
+    getColor('sec-green') 394px
   );
-  //   position: relative;
+
+  @include mq(tablet) {
+    @include section-indent(80, 40);
+    background-image: linear-gradient(
+      transparent 380px,
+      getColor('sec-green') 380px
+    );
+  }
+
+  @include mq(desktop) {
+    @include section-indent(100, 120);
+    background-image: linear-gradient(
+      transparent 230px,
+      getColor('sec-green') 230px
+    );
+  }
 
   @include mq(tablet) {
     padding-top: 80px;

@@ -1,4 +1,8 @@
-.footer { 
+.footer {
+  @include section-indent(20);
+  @include mq(tablet) {
+    @include section-indent(0, 12);
+  }
   background-color: getColor('sec-green');
 }
 
@@ -7,15 +11,14 @@
 }
 
 .footer__wraper {
-    
   @include mq(tablet, $type: min) {
-      display: flex;  
-      flex-direction: row;
-    }
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .footer__slogan-above {
-@include fonts($fw: 700, $fs: 18px, $lh: 22px, $ls: 0.04em);
+  @include fonts($fw: 700, $fs: 18px, $lh: 22px, $ls: 0.04em);
   text-transform: uppercase;
   max-width: 232px;
   color: getColor('basic-white');
@@ -26,7 +29,7 @@
     margin-bottom: 8px;
   }
 
-  @include mq (desktop, $type: min) {
+  @include mq(desktop, $type: min) {
     @include fonts($fw: 400, $fs: 30px, $lh: 37px, $ls: 0.04em);
     max-width: 504px;
     margin-bottom: 14px;
@@ -42,13 +45,13 @@
   color: getColor('basic-white');
 
   @include mq(tablet, $type: min) {
-    @include fonts($fw: 700, $fs: 48px, $lh: 59px, $ls: 0.06em);  
+    @include fonts($fw: 700, $fs: 48px, $lh: 59px, $ls: 0.06em);
     max-width: 352px;
     margin-bottom: 0;
     margin-top: 0;
   }
 
-  @include mq (desktop, $type: min) {
+  @include mq(desktop, $type: min) {
     @include fonts($fw: 700, $fs: 58px, $lh: 71px, $ls: 0.06em);
     max-width: 504px;
     margin-bottom: 0;
@@ -56,17 +59,16 @@
 }
 
 .footer__call-text {
-  @include fonts($fw: 700, $fs: 12px, $lh: 22px, $ls: 0.02em);  
+  @include fonts($fw: 700, $fs: 12px, $lh: 22px, $ls: 0.02em);
   color: getColor('sec-black');
   display: flex;
   justify-content: flex-end;
-  
 
   @include mq(tablet, $type: min) {
     font-size: 14px;
   }
 
-  @include mq (desktop, $type: min) {
+  @include mq(desktop, $type: min) {
     font-size: 16px;
     margin-bottom: 0;
   }
@@ -81,7 +83,7 @@
     font-size: 14px;
   }
 
-  @include mq (desktop, $type: min) {
+  @include mq(desktop, $type: min) {
     font-size: 16px;
   }
 }
@@ -91,11 +93,10 @@
 }
 
 .footer__copyright-text {
-  @include fonts($fw: 700, $fs: 14px, $lh: 21px, $ls: 0.02em);  
+  @include fonts($fw: 700, $fs: 14px, $lh: 21px, $ls: 0.02em);
   text-align: center;
   color: getColor('sec-grey');
   padding-top: 20px;
-  padding-bottom: 20px;
 
   @include mq(tablet, $type: min) {
     line-height: calc(26 / 14);
@@ -103,7 +104,7 @@
     padding-bottom: 12px;
   }
 
-  @include mq (desktop, $type: min) {
+  @include mq(desktop, $type: min) {
     font-size: 12px;
   }
 }
@@ -119,13 +120,13 @@
     gap: 30px;
   }
 
-  @include mq (desktop, $type: min) {
+  @include mq(desktop, $type: min) {
     margin-bottom: 40px;
   }
 }
 
 .socials-item {
-  @include transitions (transform);
+  @include transitions(transform);
   background-color: getColor('basic-yellow');
   border-radius: 50%;
   width: 34px;
@@ -134,7 +135,7 @@
 
 .socials__link {
   @include flex;
-  @include transitions (fill);
+  @include transitions(fill);
   border-radius: 50%;
   width: 100%;
   height: 100%;
@@ -149,17 +150,15 @@
 }
 
 .footer__contacts {
-    padding-bottom: 40px;
-  }
+  padding-bottom: 40px;
+}
 
-  .footer__copyright-first-part,
-  .footer__copyright-second-part {
-    display: block;
-  }
-
+.footer__copyright-first-part,
+.footer__copyright-second-part {
+  display: block;
+}
 
 @include mq(tablet, $type: min) {
-  
   .footer__slogan {
     flex: 50%;
     padding-bottom: 32px;
@@ -176,8 +175,7 @@
   }
 }
 
-@include mq (desktop, $type: min) {
-  
+@include mq(desktop, $type: min) {
   .footer__slogan {
     flex: 50%;
     padding-bottom: 60px;
@@ -186,6 +184,5 @@
     flex: 50%;
     padding-top: 18px;
     padding-bottom: 60px;
-  } 
+  }
 }
-
